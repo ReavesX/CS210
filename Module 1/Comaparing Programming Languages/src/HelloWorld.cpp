@@ -1,8 +1,9 @@
 /*
-* Developer: Don Jackson
-* Date: November 2, 2025
-* Purpose: This application prints "Hello, World!" to the console.
-*/
+ * Developer: Don Jackson
+ * Date: November 2, 2025
+ * Purpose: This application prints "Hello, World!" to the console.
+ *
+ * /
 
 #include <iostream>  // So that we can use input and output.
 using namespace std; // Using the standard namespace to avoid prefixing std::
