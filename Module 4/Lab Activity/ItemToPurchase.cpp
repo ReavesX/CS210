@@ -1,4 +1,33 @@
 #include <iostream>
+#include "ItemToPurchase.hpp"
+
 using namespace std;
 
-#include "ItemToPurchase.hpp"
+
+
+ItemToPurchase::ItemToPurchase(){
+    itemName = "none";
+    itemPrice = 0;
+    itemQuantity = 0;
+}
+
+
+// public setter and getter functions
+void ItemToPurchase::SetName(string itemName){
+     this->itemName = itemName;
+    }
+void ItemToPurchase::SetPrice(int itemPrice){
+     this->itemPrice = itemPrice;
+    }
+void ItemToPurchase::SetQuantity(int itemQuantity){
+     this->itemQuantity = itemQuantity;
+}        
+string ItemToPurchase::GetName() const{
+    return itemName;
+}
+int ItemToPurchase::GetPrice() const{
+    return itemPrice;
+}
+int ItemToPurchase::GetQuantity() const{
+    return itemQuantity;
+}
