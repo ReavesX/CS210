@@ -10,22 +10,22 @@
 #include <string>
 
 class Clock {
-  public:
-    Clock(int h, int m, int s);
+public:
+  Clock(int h, int m, int s);
 
-    void addHour();  // adds 1 hour
+  void addHour(); // adds 1 hour
 
-    void addMinute();  // adds 1 minute
+  void addMinute(); // adds 1 minute
 
-    void addSecond();  // adds 1 second
+  void addSecond(); // adds 1 second
 
-    std::string get12HourTime();  // gets the 12hr time
-    std::string get24HourTime();  // gets the 24hr time
+  std::string get12HourTime(); // gets the 12hr time
+  std::string get24HourTime(); // gets the 24hr time
 
-  private:
-    int hours;
-    int minutes;
-    int seconds;
+private:
+  int hours;
+  int minutes;
+  int seconds;
 };
 
 #endif
