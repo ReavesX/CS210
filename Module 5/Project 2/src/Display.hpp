@@ -1,19 +1,20 @@
 /*
 * Developer: Donald Jackson
 * Date: November 29, 2025
-* Purpose: Implement a display class with ability to update the display, showing the balance, deposit, and withdraw.
+* Purpose: Define the Display class for handling user input and outputting investment reports.
 */
-#ifndef DISPLAY_HPP
-#define DISPLAY_HPP
+
+#ifndef AIRGEAD_BANKING_PROJECT_SRC_DISPLAY_H_
+#define AIRGEAD_BANKING_PROJECT_SRC_DISPLAY_H_
+
+#include "Account.hpp"
 
 class Display {
     public:
-        void updateDisplay();
-        void showBalance();
-        void showDeposit();
-        void showWithdraw();e
-        void showDepositHistory();
-        void showWithdrawHistory();
+        void displayInputScreen(Account& t_account);
+        void displayYearEndReport(Account& t_account);
+    private:
+        void printDetails(int t_year, double t_yearEndBalance, double t_interestEarned);
 };
 
-#endif // DISPLAY_HPP
+#endif // AIRGEAD_BANKING_PROJECT_SRC_DISPLAY_H_

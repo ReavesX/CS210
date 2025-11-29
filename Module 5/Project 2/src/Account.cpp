@@ -1,25 +1,36 @@
 /*
 * Developer: Donald Jackson
 * Date: November 29, 2025
-* Purpose: Implement a bank account class with deposit, withdraw, and balance checking functionality.
+* Purpose: Implement the Account class methods for investment calculation.
 */
 
-void Account::deposit() {
+#include "Account.hpp"
+#include <vector>
+
+void Account::setValues(double t_initialInvestment, double t_monthlyDeposit, double t_annualInterest, int t_numberOfYears) {
     
 }
 
-void Account::withdraw() {
-    
+double Account::getInitialInvestment() const {
+    return 0.0;
 }
 
-void Account::checkBalance() {
-    
+double Account::getMonthlyDeposit() const {
+    return 0.0;
 }
 
-void Account::depositHistory() {
-    
+double Account::getAnnualInterest() const {
+    return 0.0;
 }
 
-void Account::withdrawHistory() {
-    
+int Account::getNumberOfYears() const {
+    return 0;
+}
+
+double Account::calculateBalance(int t_years, bool t_withMonthlyDeposit) {
+    return 0.0;
+}
+
+double Account::calculateInterestEarned(int t_years, bool t_withMonthlyDeposit) {
+    return 0.0;
 }

@@ -1,29 +1,23 @@
 /*
 * Developer: Donald Jackson
 * Date: November 29, 2025
-* Purpose: Implement a display class with ability to update the display, showing the balance, deposit and withdraw history.
+* Purpose: Implement the Display class methods for user interaction and reporting.
 */
 
-void Display::updateDisplay() {
+#include "Display.hpp"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+void Display::displayInputScreen(Account& t_account) {
     
 }
 
-void Display::showBalance() {
+void Display::displayYearEndReport(Account& t_account) {
     
 }
 
-void Display::showDeposit() {
-    
-}
-
-void Display::showWithdraw() {
-    
-}
-
-void Display::showDepositHistory() {
-    
-}
-
-void Display::showWithdrawHistory() {
+void Display::printDetails(int t_year, double t_yearEndBalance, double t_interestEarned) {
     
 }

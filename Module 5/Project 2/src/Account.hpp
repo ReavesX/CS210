@@ -1,19 +1,32 @@
 /*
 * Developer: Donald Jackson
 * Date: November 29, 2025
-* Purpose: Implement a bank account class with deposit, withdraw, and balance checking functionality.
+* Purpose: Define the Account class for managing investment data and calculations.
 */
 
-#ifndef ACCOUNT_HPP
-#define ACCOUNT_HPP
+#ifndef AIRGEAD_BANKING_PROJECT_SRC_ACCOUNT_H_
+#define AIRGEAD_BANKING_PROJECT_SRC_ACCOUNT_H_
 
 class Account {
     public:
-        void deposit();
-        void withdraw();
-        void checkBalance();
-        void depositHistory();
-        void withdrawHistory();
+        // Setters for investment details
+        void setValues(double t_initialInvestment, double t_monthlyDeposit, double t_annualInterest, int t_numberOfYears);
+
+        // Getters
+        double getInitialInvestment() const;
+        double getMonthlyDeposit() const;
+        double getAnnualInterest() const;
+        int getNumberOfYears() const;
+
+        // Calculation methods
+        double calculateBalance(int t_years, bool t_withMonthlyDeposit);
+        double calculateInterestEarned(int t_years, bool t_withMonthlyDeposit);
+
+    private:
+        double m_initialInvestment;
+        double m_monthlyDeposit;
+        double m_annualInterest;
+        int m_numberOfYears;
 };
 
-#endif // ACCOUNT_HPP
+#endif // AIRGEAD_BANKING_PROJECT_SRC_ACCOUNT_H_
