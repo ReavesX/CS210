@@ -4,8 +4,8 @@
 * Purpose: Define the Account class for managing investment data and calculations.
 */
 
-#ifndef AIRGEAD_BANKING_PROJECT_SRC_ACCOUNT_H_
-#define AIRGEAD_BANKING_PROJECT_SRC_ACCOUNT_H_
+#ifndef ACCOUNT_HPP
+#define ACCOUNT_HPP
 
 class Account {
     public:
@@ -29,4 +29,4 @@ class Account {
         int m_numberOfYears;
 };
 
-#endif // AIRGEAD_BANKING_PROJECT_SRC_ACCOUNT_H_
+#endif // ACCOUNT_HPP
