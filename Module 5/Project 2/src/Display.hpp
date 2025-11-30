@@ -4,8 +4,8 @@
 * Purpose: Define the Display class for handling user input and outputting investment reports.
 */
 
-#ifndef DISPLAY_HPP
-#define DISPLAY_HPP
+#ifndef AIRGEAD_BANKING_PROJECT_SRC_DISPLAY_H_
+#define AIRGEAD_BANKING_PROJECT_SRC_DISPLAY_H_
 
 #include "Account.hpp"
 
@@ -17,4 +17,4 @@ class Display {
         void printDetails(int t_year, double t_yearEndBalance, double t_interestEarned);
 };
 
-#endif // DISPLAY_HPP
+#endif // AIRGEAD_BANKING_PROJECT_SRC_DISPLAY_H_

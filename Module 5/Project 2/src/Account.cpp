@@ -88,5 +88,6 @@ double Account::calculateBalance(int t_years, bool t_withMonthlyDeposit) {
   * @return The interest earned on the account
   */
 double Account::calculateInterestEarned(int t_years, bool t_withMonthlyDeposit) {
-    return calculateBalance(t_years, t_withMonthlyDeposit) - m_initialInvestment;
+    double totalDeposits = t_withMonthlyDeposit ? (m_monthlyDeposit * 12 * t_years) : 0.0;
+    return calculateBalance(t_years, t_withMonthlyDeposit) - m_initialInvestment - totalDeposits;
 }

@@ -7,17 +7,29 @@
 #include "Account.hpp"
 #include "Display.hpp"
 #include <iostream>
+#include <limits>
 
 using namespace std;
 
 int main() {
     Account account;
     Display display;
-    
-    // TODO: Implement the main loop to:
-    // 1. Call displayInputScreen to get user input
-    // 2. Call displayYearEndReport to show results
-    // 3. Ask user if they want to continue
+    char choice = 'y';
+
+    while (choice == 'y' || choice == 'Y') {
+        // 1. Display Data Input Screen
+        display.displayInputScreen(account);
+
+        // 2. Display Static Reports
+        display.displayYearEndReport(account);
+
+        // 3. Ask to continue
+        cout << "Do you want to test another scenario? (y/n): ";
+        cin >> choice;
+        
+        // Clear the input buffer to prevent issues in the next iteration
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
 
     return 0;
 }
