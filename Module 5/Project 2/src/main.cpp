@@ -1,16 +1,16 @@
 /*
-* Developer: Donald Jackson
-* Date: November 29, 2025
-* Purpose: Main driver for the Airgead Banking Investment Calculator.
-*/
+ * Developer: Donald Jackson
+ * Date: November 29, 2025
+ * Purpose: Main driver for the Airgead Banking Investment Calculator.
+ */
 
-#include "Account.hpp"
-#include "Display.hpp"
 #include <iostream>
 #include <limits>
 
-using namespace std;
+#include "Account.hpp"
+#include "Display.hpp"
 
+using namespace std;
 
 int main() {
     Account account;
@@ -27,7 +27,7 @@ int main() {
         // 3. Ask to continue
         cout << "Do you want to test another scenario? (y/n): ";
         cin >> choice;
-        
+
         // Clear the input buffer to prevent issues in the next iteration
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
