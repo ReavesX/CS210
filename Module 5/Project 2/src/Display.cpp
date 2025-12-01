@@ -25,7 +25,7 @@ void Display::displayInputScreen(Account& t_account) {
     while (!(cin >> initialInvestment) || initialInvestment < 0) {
         cout << "Invalid input. Please enter a positive number: $";
         cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear the input buffer
     }
 
     // Get Monthly Deposit
@@ -33,7 +33,7 @@ void Display::displayInputScreen(Account& t_account) {
     while (!(cin >> monthlyDeposit) || monthlyDeposit < 0) { // loop while input is not a number or is negative
         cout << "Invalid input. Please enter a positive number: $";
         cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear the input buffer
     }
 
     // Get Annual Interest
@@ -41,7 +41,7 @@ void Display::displayInputScreen(Account& t_account) {
     while (!(cin >> annualInterest) || annualInterest < 0) { // loop while input is not a number or is negative
         cout << "Invalid input. Please enter a positive number: %";
         cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear the input buffer
     }
 
     // Get Number of Years
@@ -49,7 +49,7 @@ void Display::displayInputScreen(Account& t_account) {
     while (!(cin >> numberOfYears) || numberOfYears <= 0) { // loop while input is not a number or is negative
         cout << "Invalid input. Please enter a positive integer: ";
         cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear the input buffer
     }
 
     // Set values in the account object
@@ -57,7 +57,7 @@ void Display::displayInputScreen(Account& t_account) {
 
     cout << "Press any key to continue..." << endl;
     // Clear buffer and wait for input
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear the input buffer
     cin.get();
 }
 
@@ -75,7 +75,7 @@ void Display::displayYearEndReport(Account& t_account) {
         double balance = t_account.calculateBalance(i, false);
         double interest = t_account.calculateInterestEarned(i, false);
         printDetails(i, balance, interest);
-    }
+    } // print all year end balances and interest without monthly deposits
     
     // Report 2: With additional monthly deposits
     cout << endl;
@@ -88,7 +88,7 @@ void Display::displayYearEndReport(Account& t_account) {
         double balance = t_account.calculateBalance(i, true);
         double interest = t_account.calculateInterestEarned(i, true);
         printDetails(i, balance, interest);
-    }
+    } // print all year end balances and interest with monthly deposits
     cout << endl;
 }
 
@@ -97,4 +97,4 @@ void Display::printDetails(int t_year, double t_yearEndBalance, double t_interes
          << fixed << setprecision(2) 
          << setw(24) << "$" << t_yearEndBalance 
          << setw(28) << "$" << t_interestEarned << endl;
-}
+} // print year end balance and interest

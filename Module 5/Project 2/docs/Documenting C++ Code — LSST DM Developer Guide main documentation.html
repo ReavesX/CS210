@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://developer.lsst.io/cpp/api-docs.html -->
+<html class="writer-html5" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documenting C++ Code — LSST DM Developer Guide main documentation</title>
+  <link rel="stylesheet" href="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/pygments.css"
+    type="text/css">
+  <link rel="stylesheet" href="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/theme.css"
+    type="text/css">
+  <link rel="canonical" href="https://developer.lsst.io/cpp/api-docs.html">
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <script data-url_root="../" id="documentation_options"
+    src="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/documentation_options.js.download"></script>
+  <script src="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/jquery.js.download"></script>
+  <script
+    src="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/underscore.js.download"></script>
+  <script
+    src="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/_sphinx_javascript_frameworks_compat.js.download"></script>
+  <script src="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/doctools.js.download"></script>
+  <script
+    src="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/sphinx_highlight.js.download"></script>
+  <script src="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/theme.js.download"></script>
+  <link rel="index" title="Index" href="https://developer.lsst.io/genindex.html">
+  <link rel="search" title="Search" href="https://developer.lsst.io/search.html">
+  <link rel="next" title="Using clang-format for LSST Development"
+    href="https://developer.lsst.io/cpp/clang-format.html">
+  <link rel="prev" title="Software Unit Test Policy" href="https://developer.lsst.io/coding/unit-test-policy.html">
+  <style>
+    .village-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2147483647;
+      background: #0000003d;
+      color-scheme: light
+    }
+
+    .village-iframe.village-loading {
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+
+    .village-iframe>.village-spinner {
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 2px solid #000;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      animation: spin .45s linear infinite
+    }
+
+    .village-iframe.village-hidden {
+      display: none
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0)
+      }
+
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .village-hidden {
+      display: none
+    }
+
+    [village-paths-data=facepiles] {
+      display: flex;
+      align-items: center;
+      padding-right: .5rem
+    }
+
+    [village-paths-data=facepiles] img {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      margin-right: -.5rem
+    }
+
+    [village-paths-data=facepiles] img.village-facepiler-avatar-not-found {
+      filter: blur(7px)
+    }
+
+    [village-paths-data=facepiles] img:last-child {
+      margin-right: 0
+    }
+
+    [village-paths-data=count] {
+      padding-right: .25rem
+    }
+
+    [village-paths-availability=error],
+    [village-paths-availability=found],
+    [village-paths-availability=not-found],
+    [village-paths-availability=not-activated] {
+      display: none !important
+    }
+
+    [village-paths-availability=loading] {
+      display: inline-flex !important
+    }
+  </style>
+  <script id="simplify-jobs-page-script"
+    src="chrome-extension://pbanhockgagggenencehbnadejlgchfc/js/pageScript.bundle.js"></script>
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" style="background: #343131">
+          <a href="https://developer.lsst.io/index.html">
+            <img
+              src="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/rubin-imagotype-color-on-black.svg"
+              class="logo" alt="Logo" style="width: 100%;">
+          </a>
+
+
+
+
+          <div class="version">
+            Edition: <span style="color: rgb(179, 179, 179)">main</span>
+          </div>
+
+
+
+          <div class="wy-menu wy-menu-vertical"
+            style="padding-left: 0; left-margin: 0; right-margin: auto; margin-bottom: 1em">
+            <ul>
+              <li class="toctree-l1">
+                <a href="https://developer.lsst.io/v" class="reference internal" style="padding-left: 0;">Change
+                  edition</a>
+              </li>
+            </ul>
+          </div>
+
+
+          <div role="search">
+            <form id="rtd-search-form" class="wy-form" action="https://developer.lsst.io/search.html" method="get">
+              <input type="text" name="q" placeholder="Search docs" aria-label="Search docs">
+              <input type="hidden" name="check_keywords" value="yes">
+              <input type="hidden" name="area" value="default">
+            </form>
+          </div>
+
+
+        </div>
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+          <p class="caption" role="heading"><span class="caption-text">Team</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/team/onboarding.html">Onboarding Checklist</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/team/code-of-conduct.html">Team Culture and Conduct Standards</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/team/tools.html">Tools
+                and external resources</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/team/focus-friday.html">Focus Friday</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/team/meeting-free-weeks.html">Meeting Free Weeks</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/team/empowerment.html">Empowerment of DM team members</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/team/drp.html">Data
+                Release Production</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Communications</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/communications/slack-culture.html">Slack Culture</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/communications/slack-github-username.html">Configuring your GitHub
+                username in your Slack profile</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/communications/rfc.html">Request for comments (RFC)</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/communications/rfd.html">Request for discussion (RFD)</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/communications/wiki.html">Policy on DM Confluence Use</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/communications/mail.html">Mailing lists</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/communications/presenting-at-conferences.html">Attending and Presenting
+                at Conferences</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/communications/community-support.html">Providing Support to the
+                Community</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/communications/calendars.html">DM Calendars</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Project docs</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/project-docs/change-controlled-docs.html">Writing change-controlled
+                documentation</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/project-docs/publication-policy.html">Publishing Papers and
+                Proceedings</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/project-docs/technotes.html">Technotes for Stand-Alone Technical
+                Documentation</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/project-docs/test-documentation.html">Test Documentation</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Work</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/work/flow.html">DM
+                Development Workflow with Git, GitHub, JIRA and Jenkins</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/work/backports.html">Backporting Tickets to a Release Branch</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/work/project-planning.html">Project Planning for Software
+                Development</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/work/jira-agile.html">JIRA Agile Usage</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/work/jira-tips.html">JIRA Work Management Recipes</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Code Style Guides</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/coding/intro.html">Introduction to DM’s Code Style Guides</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/coding/unit-test-policy.html">Software Unit Test Policy</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">C++</span></p>
+          <ul class="current" aria-expanded="true">
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/cpp/style.html">DM C++
+                Style Guide</a></li>
+            <li class="toctree-l1 current" aria-expanded="true"><a class="reference internal current"
+                href="https://developer.lsst.io/cpp/api-docs.html#" aria-expanded="true"><button class="toctree-expand"
+                  title="Open/close menu"></button>Documenting C++ Code</a>
+              <ul>
+                <li class="toctree-l2"><a class="reference internal"
+                    href="https://developer.lsst.io/cpp/api-docs.html#boilerplate-for-header-h-and-source-cc-files">Boilerplate
+                    for Header (.h) and Source (.cc) Files</a></li>
+                <li class="toctree-l2"><a class="reference internal"
+                    href="https://developer.lsst.io/cpp/api-docs.html#basic-format-of-documentation-blocks"><button
+                      class="toctree-expand" title="Open/close menu"></button>Basic Format of Documentation Blocks</a>
+                  <ul>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#documentation-must-be-delimited-in-javadoc-style">Documentation
+                        MUST be delimited in Javadoc style</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#multi-line-documentation-delimiters-should-be-on-their-own-lines">Multi-line
+                        documentation delimiters SHOULD be on their own lines</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#documentation-must-use-javadoc-style-tags">Documentation
+                        MUST use Javadoc-style tags</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#documentation-should-use-markdown-for-formatting">Documentation
+                        SHOULD use Markdown for formatting</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#documentation-must-appear-where-a-component-is-first-declared">Documentation
+                        MUST appear where a component is first declared</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#documentation-must-appear-before-the-declaration-it-describes-and-with-the-same-indentation">Documentation
+                        MUST appear before the declaration it describes, and with the same indentation</a></li>
+                  </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal"
+                    href="https://developer.lsst.io/cpp/api-docs.html#common-structure-of-documentation-blocks"><button
+                      class="toctree-expand" title="Open/close menu"></button>Common Structure of Documentation
+                    Blocks</a>
+                  <ul>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#short-summary">Short Summary</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#extended-summary">Extended Summary</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#template-parameters"><button
+                          class="toctree-expand" title="Open/close menu"></button>Template Parameters</a>
+                      <ul>
+                        <li class="toctree-l4"><a class="reference internal"
+                            href="https://developer.lsst.io/cpp/api-docs.html#template-specializations">Template
+                            Specializations</a></li>
+                      </ul>
+                    </li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#function-method-parameters"><button
+                          class="toctree-expand" title="Open/close menu"></button>Function/Method Parameters</a>
+                      <ul>
+                        <li class="toctree-l4"><a class="reference internal"
+                            href="https://developer.lsst.io/cpp/api-docs.html#annotating-parameters-with-inline-comments-historical">Annotating
+                            Parameters with Inline Comments (historical)</a></li>
+                      </ul>
+                    </li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#returns">Returns</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#throws">Throws</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#exception-safety">Exception Safety</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#helper-functions">Helper Functions</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#initializer-declaration">Initializer
+                        Declaration</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#see-also">See Also</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#notes">Notes</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#references">References</a></li>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#examples">Examples</a></li>
+                  </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal"
+                    href="https://developer.lsst.io/cpp/api-docs.html#documenting-defining-packages">Documenting/Defining
+                    Packages</a></li>
+                <li class="toctree-l2"><a class="reference internal"
+                    href="https://developer.lsst.io/cpp/api-docs.html#documenting-classes-and-type-aliases">Documenting
+                    Classes and Type Aliases</a></li>
+                <li class="toctree-l2"><a class="reference internal"
+                    href="https://developer.lsst.io/cpp/api-docs.html#documenting-enumerated-types"><button
+                      class="toctree-expand" title="Open/close menu"></button>Documenting Enumerated Types</a>
+                  <ul>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#annotating-enum-values-with-inline-comments-optional">Annotating
+                        Enum Values with Inline Comments (optional)</a></li>
+                  </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal"
+                    href="https://developer.lsst.io/cpp/api-docs.html#documenting-methods-and-functions"><button
+                      class="toctree-expand" title="Open/close menu"></button>Documenting Methods and Functions</a>
+                  <ul>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#overloaded-function-method-definitions">Overloaded
+                        Function/Method Definitions</a></li>
+                  </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal"
+                    href="https://developer.lsst.io/cpp/api-docs.html#documenting-constants-variables-and-data-members"><button
+                      class="toctree-expand" title="Open/close menu"></button>Documenting Constants, Variables, and Data
+                    Members</a>
+                  <ul>
+                    <li class="toctree-l3"><a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#annotating-constants-and-variables-with-inline-comments-optional">Annotating
+                        Constants and Variables with Inline Comments (optional)</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/cpp/clang-format.html">Using clang-format for LSST Development</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/cpp/testing-private-functions.html">Unit-Testing Private C++
+                Functions</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/cpp/templates.html">Using C++ Templates</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/cpp/boost.html">Using
+                Boost</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/cpp/eigen.html">Using
+                Eigen</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/cpp/profiling.html">C++
+                performance profiling</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/cpp/compilation-db.html">Creating a compilation database</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Python</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/python/style.html">DM
+                Python Style Guide</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/python/formatting.html">Formatting Python Code Automatically</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/python/testing.html">Python Unit Testing</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/python/numpydoc.html">Documenting Python APIs with docstrings</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/python/astropy.html">Using Astropy</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/python/profiling.html">Python performance profiling</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/python/cli.html">Python
+                Command Line Interfaces</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Pybind11</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/pybind11/style.html">DM
+                Pybind11 Style Guide</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/pybind11/how-to.html">Python wrappers for C++ with pybind11</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">JavaScript</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/javascript/jsdoc.html">Documenting JavaScript APIs with JSDoc</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">ReStructuredText</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/restructuredtext/style.html">ReStructuredText Style Guide</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">DM Stack</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/platforms.html">Supported Platforms</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/transferring-code.html">Transferring Code Between Packages</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/deprecating-interfaces.html">Deprecating Interfaces</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/logging.html">Logging</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/debug.html">Debugging Tasks with <code
+                  class="docutils literal notranslate"><span class="pre">lsstDebug</span></code></a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/documentation-system-overview.html">Overview of the Stack
+                documentation system</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/layout-of-doc-directory.html">Layout of the doc/ directory</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/package-documentation-topic-types.html">Topic types for package
+                documentation</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/add-a-package-to-pipelines-lsst-io.html">How to add a package to
+                pipelines.lsst.io</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/building-single-package-docs.html">Building single-package
+                documentation locally</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/building-pipelines-lsst-io-locally.html">Building the
+                pipelines.lsst.io site locally</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/building-pipelines-lsst-io-with-documenteer-job.html">Building
+                pipelines.lsst.io with Jenkins (sqre/infra/documenteer)</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/jenkins-stack-os-matrix.html">Testing the LSST DM Stack with the
+                Jenkins stack-os-matrix Job</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/unit-test-coverage.html">Coverage Analysis</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/eups-tutorial.html">EUPS Tutorial</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/stack/lsstsw.html">The
+                LSST Software Build Tool</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/adding-a-new-package.html">Adding a New Package to the Build</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/building-with-pip.html">Making Your Package pip Installable</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/moving-to-github-actions.html">Moving to GitHub Actions from
+                Travis</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/license-and-copyright.html">Managing license and copyright in
+                Stack packages</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/packaging-third-party-eups-dependencies.html">Distributing
+                Third-Party Packages with EUPS</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/stack/renaming-a-package.html">Renaming a Stack package</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/stack/conda.html">Conda
+                and rubin-env</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Git</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/git/setup.html">Git
+                Configuration Standards &amp; Recommendations</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/git/git-lfs.html">Using
+                Git LFS (Large File Storage) for data repositories</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Editors</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/editors/emacs.html">Emacs Configuration for LSST Development</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/editors/sublime.html">SublimeText Configuration for LSST Development</a>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/editors/vim.html">Vim
+                Configuration for LSST Development</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/editors/vscode.html">Visual Studio Code Configuration for LSST
+                Development</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Legal</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/legal/licensing-overview.html">Licensing LSST DM source code and
+                content</a></li>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/legal/copyright-overview.html">Copyrights for LSST DM work and the
+                COPYRIGHT file</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">User docs</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/user-docs/index.html">User documentation style guide</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">IT Overview</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="https://developer.lsst.io/it/itsc.html">LSST
+                Information Technology Services Committee (ITSC)</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Jenkins</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/jenkins/getting-started.html">Jenkins ci.lsst.cloud Overview</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">IDF</span></p>
+          <ul>
+            <li class="toctree-l1"><a class="reference internal"
+                href="https://developer.lsst.io/idf/overview.html">Interim Data Facility Overview</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" aria-label="Mobile navigation menu" style="background: #343131">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="https://developer.lsst.io/index.html">LSST DM Developer Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+            <ul class="wy-breadcrumbs">
+              <li><a href="https://developer.lsst.io/index.html" class="icon icon-home" aria-label="Home"></a></li>
+              <li class="breadcrumb-item active">Documenting C++ Code</li>
+              <li class="wy-breadcrumbs-aside">
+                <a href="https://github.com/lsst-dm/dm_dev_guide/blob/main/cpp/api-docs.rst" class="fa fa-github"> Edit
+                  on GitHub</a>
+              </li>
+            </ul>
+            <hr>
+          </div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div itemprop="articleBody">
+
+              <section id="documenting-c-code">
+                <h1>Documenting C++ Code<a class="headerlink"
+                    href="https://developer.lsst.io/cpp/api-docs.html#documenting-c-code"
+                    title="Permalink to this heading">¶</a></h1>
+                <p>We document C++ code in two ways:</p>
+                <ol class="arabic">
+                  <li>
+                    <p>By writing <em>documentation blocks</em> for all public or protected C++ components (namespaces,
+                      types, methods, functions, and constants).</p>
+                    <p>The LSST Stack uses <a class="reference external" href="http://www.doxygen.org/">Doxygen</a> to
+                      build C++ API reference documentation from comment blocks. This documentation is exposed to users
+                      in a variety of contexts, from developers reading the code to readers of the <a
+                        class="reference external" href="http://doxygen.lsst.codes/stack/doxygen/x_mainDoxyDoc/">Stack
+                        Doxygen Documentation</a>.</p>
+                    <p>Doxygen comment blocks are the public specification of our C++ API.</p>
+                    <p>Our Doxygen configuration file is located in the <a class="reference external"
+                        href="https://github.com/lsst/base/blob/main/doc/base.inc">base package</a>.
+                      For Science Pipelines packages, it is automatically included in all documentation builds.</p>
+                  </li>
+                  <li>
+                    <p>By commenting our code internally with C++ comments (<code
+                        class="docutils literal notranslate"><span class="pre">//</span></code> or <code
+                        class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">..</span> <span class="pre">*/</span></code>).
+                    </p>
+                    <p>These comments are meant to be read only by developers reading and editing the source code.</p>
+                  </li>
+                </ol>
+                <p>This page focuses on public code documentation using Doxygen, while internal comments are discussed
+                  in our <a class="reference internal" href="https://developer.lsst.io/cpp/style.html"><span
+                      class="doc">DM C++ Style Guide</span></a>.</p>
+                <p>Treat the guidelines on this page as an extension of the <a class="reference internal"
+                    href="https://developer.lsst.io/cpp/style.html"><span class="doc">DM C++ Style Guide</span></a>.</p>
+                <div class="admonition note">
+                  <p class="admonition-title">Note</p>
+                  <p>Changes to this document must be approved by the System Architect (<a class="reference external"
+                      href="https://jira.lsstcorp.org/browse/RFC-24">RFC-24</a>).
+                    To request changes to these standards, please file an <a class="reference internal"
+                      href="https://developer.lsst.io/communications/rfc.html"><span class="doc">RFC</span></a>.</p>
+                </div>
+                <p><strong>This guide will evolve as a mechanism to document C++ APIs wrapped in Python is
+                    developed.</strong></p>
+                <section id="boilerplate-for-header-h-and-source-cc-files">
+                  <span id="cpp-file-boilerplate"></span>
+                  <h2>Boilerplate for Header (.h) and Source (.cc) Files<a class="headerlink"
+                      href="https://developer.lsst.io/cpp/api-docs.html#boilerplate-for-header-h-and-source-cc-files"
+                      title="Permalink to this heading">¶</a></h2>
+                  <p>The beginning of both header and source code files should include</p>
+                  <ol class="arabic">
+                    <li>
+                      <p>A formatting hint for Emacs</p>
+                      <div class="highlight-cpp notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="c1">// -*- lsst-c++ -*-</span>
+</pre>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>A copyright and license block (note: <strong>NOT</strong> a Doxygen comment block) using <a
+                          class="reference external"
+                          href="https://github.com/lsst/templates/tree/main/file_templates/stack_license_preamble_cpp">the
+                          standard text</a>.</p>
+                      <div class="highlight-jinja notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="x">/*</span>
+<span class="x"> * This file is part of </span><span class="cp">{{</span> <span class="nv">cookiecutter.package_name</span> <span class="cp">}}</span><span class="x">.</span>
+<span class="x"> *</span>
+<span class="x"> * Developed for the LSST Data Management System.</span>
+<span class="x"> * This product includes software developed by the LSST Project</span>
+<span class="x"> * (https://www.lsst.org).</span>
+<span class="x"> * See the COPYRIGHT file at the top-level directory of this distribution</span>
+<span class="x"> * for details of code ownership.</span>
+<span class="x"> *</span>
+<span class="x"> * This program is free software: you can redistribute it and/or modify</span>
+<span class="x"> * it under the terms of the GNU General Public License as published by</span>
+<span class="x"> * the Free Software Foundation, either version 3 of the License, or</span>
+<span class="x"> * (at your option) any later version.</span>
+<span class="x"> *</span>
+<span class="x"> * This program is distributed in the hope that it will be useful,</span>
+<span class="x"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="x"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="x"> * GNU General Public License for more details.</span>
+<span class="x"> *</span>
+<span class="x"> * You should have received a copy of the GNU General Public License</span>
+<span class="x"> * along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</span>
+<span class="x"> */</span>
+</pre>
+                        </div>
+                      </div>
+                      <p>Replace <code
+                          class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.package_name</span> <span class="pre">}}</span></code>
+                        with the package’s name.</p>
+                    </li>
+                  </ol>
+                  <p>Some older code contains file-level Doxygen blocks (i.e., comments with a <code
+                      class="docutils literal notranslate"><span class="pre">@file</span></code> command).
+                    Such blocks should not be used in new code, as they rarely provide useful information about API
+                    elements defined by the file, and do not integrate well with <a class="reference external"
+                      href="https://pipelines.lsst.io/">pipelines.lsst.io</a>.
+                    Ordinary C++ comments may still be used to document files for developers reading the source code.
+                  </p>
+                </section>
+                <section id="basic-format-of-documentation-blocks">
+                  <span id="cpp-doxygen-basics"></span>
+                  <h2>Basic Format of Documentation Blocks<a class="headerlink"
+                      href="https://developer.lsst.io/cpp/api-docs.html#basic-format-of-documentation-blocks"
+                      title="Permalink to this heading">¶</a></h2>
+                  <p>This page covers the most important concepts in writing Doxygen-friendly C++ comments for the LSST
+                    Stack, though <a class="reference external" href="http://www.doxygen.org/manual/">Doxygen’s
+                      manual</a> is the most comprehensive reference.</p>
+                  <section id="documentation-must-be-delimited-in-javadoc-style">
+                    <span id="cpp-doxygen-javadoc"></span>
+                    <h3>Documentation MUST be delimited in Javadoc style<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#documentation-must-be-delimited-in-javadoc-style"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>Multi-line documentation blocks must begin with <code
+                        class="docutils literal notranslate"><span class="pre">/**</span></code> and end in <code
+                        class="docutils literal notranslate"><span class="pre">*/</span></code>. Single-line
+                      documentation blocks must begin with <code
+                        class="docutils literal notranslate"><span class="pre">///</span></code>. For consistency, do
+                      not begin documentation blocks with <code
+                        class="docutils literal notranslate"><span class="pre">/*!</span></code> or <code
+                        class="docutils literal notranslate"><span class="pre">//!</span></code>.</p>
+                    <p>(<em>Note:</em> one-line documentation blocks are rarely used for public APIs, see <a
+                        class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-sections"><span
+                          class="std std-ref">Common Structure of Documentation Blocks</span></a>.)</p>
+                    <p>Under certain circumstances, single-line documentation blocks may begin with <code
+                        class="docutils literal notranslate"><span class="pre">///&lt;</span></code> instead of <code
+                        class="docutils literal notranslate"><span class="pre">///</span></code>. These cases are
+                      indicated below.</p>
+                  </section>
+                  <section id="multi-line-documentation-delimiters-should-be-on-their-own-lines">
+                    <span id="cpp-doxygen-form"></span>
+                    <h3>Multi-line documentation delimiters SHOULD be on their own lines<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#multi-line-documentation-delimiters-should-be-on-their-own-lines"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>A multi-line documentation block’s summary sentence should occur on the line after the opening
+                      <code class="docutils literal notranslate"><span class="pre">/**</span></code>, and the
+                      terminating <code class="docutils literal notranslate"><span class="pre">*/</span></code> should
+                      be on its own line. An example:
+                    </p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Sum numbers in a vector.</span>
+<span class="cm"> *</span>
+<span class="cm"> * This sum is the arithmetic sum, not some other kind of sum that only</span>
+<span class="cm"> * mathematicians have heard of.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param values Container whose values are summed.</span>
+<span class="cm"> * @return sum of `values`, or 0.0 if `values` is empty.</span>
+<span class="cm"> */</span>
+</pre>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="documentation-must-use-javadoc-style-tags">
+                    <span id="cpp-doxygen-tag"></span>
+                    <h3>Documentation MUST use Javadoc-style tags<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#documentation-must-use-javadoc-style-tags"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>Documentation blocks must use tags such as <code
+                        class="docutils literal notranslate"><span class="pre">@see</span></code> or <code
+                        class="docutils literal notranslate"><span class="pre">@param</span></code> in place of <code
+                        class="docutils literal notranslate"><span class="pre">\see</span></code> or <code
+                        class="docutils literal notranslate"><span class="pre">\param</span></code>.
+                      This is both for internal consistency and to avoid conflicts with other tools that give special
+                      treatment to <code class="docutils literal notranslate"><span class="pre">\word</span></code>.</p>
+                  </section>
+                  <section id="documentation-should-use-markdown-for-formatting">
+                    <span id="cpp-doxygen-styling"></span>
+                    <h3>Documentation SHOULD use Markdown for formatting<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#documentation-should-use-markdown-for-formatting"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>LSST uses <a class="reference external"
+                        href="http://www.doxygen.org/manual/markdown.html">Markdown-formatted Doxygen comment
+                        blocks</a>. If a particular format cannot be expressed using Markdown, you MAY use <a
+                        class="reference external" href="http://www.doxygen.org/manual/commands.html">Doxygen’s built-in
+                        formatting</a> or, if necessary, <a class="reference external"
+                        href="http://www.doxygen.org/manual/htmlcmds.html">HTML markup</a>.</p>
+                  </section>
+                  <section id="documentation-must-appear-where-a-component-is-first-declared">
+                    <span id="cpp-doxygen-headeronly"></span>
+                    <h3>Documentation MUST appear where a component is first declared<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#documentation-must-appear-where-a-component-is-first-declared"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>In general, this means documentation blocks will appear in header (<code
+                        class="docutils literal notranslate"><span class="pre">.h</span></code>) files rather than
+                      source (<code class="docutils literal notranslate"><span class="pre">.cc</span></code>) files.
+                      This keeps all the documentation with the API and avoids certain false alarms when Doxygen parses
+                      C++11 code.</p>
+                  </section>
+                  <section
+                    id="documentation-must-appear-before-the-declaration-it-describes-and-with-the-same-indentation">
+                    <span id="cpp-doxygen-indentation"></span>
+                    <h3>Documentation MUST appear before the declaration it describes, and with the same indentation<a
+                        class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#documentation-must-appear-before-the-declaration-it-describes-and-with-the-same-indentation"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>For example:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Sum numbers in a vector.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param values Container whose values are summed.</span>
+<span class="cm"> * @return sum of `values`, or 0.0 if `values` is empty.</span>
+<span class="cm"> */</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">values</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>Not:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="kt">double</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">values</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Sum numbers in a vector.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param values Container whose values are summed.</span>
+<span class="cm">     * @return sum of `values`, or 0.0 if `values` is empty.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</pre>
+                      </div>
+                    </div>
+                  </section>
+                </section>
+                <section id="common-structure-of-documentation-blocks">
+                  <span id="cpp-doxygen-sections"></span>
+                  <h2>Common Structure of Documentation Blocks<a class="headerlink"
+                      href="https://developer.lsst.io/cpp/api-docs.html#common-structure-of-documentation-blocks"
+                      title="Permalink to this heading">¶</a></h2>
+                  <p>We organize Doxygen comment blocks into sections that appear in a common order. This format is
+                    analogous to the one adopted for the <a class="reference internal"
+                      href="https://developer.lsst.io/python/numpydoc.html#py-docstring-sections"><span
+                        class="std std-ref">Python documentation</span></a>.
+                    The sections and their relative order are:</p>
+                  <ol class="arabic simple">
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-short-summary"><span
+                            class="std std-ref">Short Summary</span></a></p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-extended-summary"><span
+                            class="std std-ref">Extended Summary</span></a> (recommended)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-tparameters"><span
+                            class="std std-ref">Template Parameters</span></a> (if applicable; for classes, methods, and
+                        functions)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-parameters"><span
+                            class="std std-ref">Function/Method Parameters</span></a> (if applicable; for methods and
+                        functions)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-returns"><span
+                            class="std std-ref">Returns</span></a> (if applicable; for methods and functions)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-throws"><span
+                            class="std std-ref">Throws</span></a> (if applicable; for methods and functions)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-exceptsafe"><span
+                            class="std std-ref">Exception Safety</span></a> (optional; for methods and functions)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-related"><span
+                            class="std std-ref">Helper Functions</span></a> (if applicable; for functions)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-initializer"><span
+                            class="std std-ref">Initializer Declaration</span></a> (optional; for constants)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-see-also"><span
+                            class="std std-ref">See Also</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-notes"><span
+                            class="std std-ref">Notes</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-references"><span
+                            class="std std-ref">References</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-examples"><span
+                            class="std std-ref">Examples</span></a> (optional)</p>
+                    </li>
+                  </ol>
+                  <p>For summaries of how these sections are composed in specific contexts, see:</p>
+                  <ul class="simple">
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-class-structure"><span
+                            class="std std-ref">Documenting Classes and Type Aliases</span></a></p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-enum-structure"><span
+                            class="std std-ref">Documenting Enumerated Types</span></a></p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-method-function-structure"><span
+                            class="std std-ref">Documenting Methods and Functions</span></a></p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-attribute-constants-structure"><span
+                            class="std std-ref">Documenting Constants, Variables, and Data Members</span></a></p>
+                    </li>
+                  </ul>
+                  <section id="short-summary">
+                    <span id="cpp-doxygen-short-summary"></span>
+                    <h3>Short Summary<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#short-summary"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>A one-line summary that does not use variable names or the function’s name. This summary will
+                      appear in lists of class/namespace members.</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="c1">/// Sum two numbers.</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>By default, brief summaries will end at a period followed by whitespace, or at a new line,
+                      whichever comes first. You can ignore periods that shouldn’t end the description by following them
+                      with a backslash and a space (as in <code
+                        class="docutils literal notranslate"><span class="pre">"e.g.\</span> <span class="pre">"</span></code>).
+                    </p>
+                    <p>Brief summaries should be short enough to fit on one line. If you must have a summary that
+                      extends over multiple lines, you must prefix the summary by <code
+                        class="docutils literal notranslate"><span class="pre">@brief</span></code>, which will cause
+                      the summary to end at the next blank line rather than the next line break.</p>
+                    <p>For functions and methods, the summary should be written in the imperative voice (i.e., as a
+                      command that the API consumer is giving). Getters and other methods that are more naturally
+                      described as values rather than actions may ignore this rule.</p>
+                  </section>
+                  <section id="extended-summary">
+                    <span id="cpp-doxygen-extended-summary"></span>
+                    <h3>Extended Summary<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#extended-summary"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>The extended summary is an optional sentence or short paragraph that clarifies and supports the
+                      <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-short-summary"><span
+                          class="std std-ref">summary sentence</span></a>.
+                      Taken together with the summary sentence, the summary content in general exists to help users
+                      quickly understand the role and scope of the API.
+                    </p>
+                    <p>Leave detailed discussions of the API’s features, usage patterns, background theory, and
+                      implementation details to the <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-notes"><span
+                          class="std std-ref">Notes</span></a> and <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-examples"><span
+                          class="std std-ref">Examples</span></a> sections.
+                      The <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-parameters"><span
+                          class="std std-ref">Parameters</span></a> and <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-returns"><span
+                          class="std std-ref">Returns</span></a> sections are ideal places to discuss in detail
+                      individual parameters and returned values, respectively.</p>
+                    <p>This section’s brevity is critical.
+                      The extended summary is proximate to the summary sentence so that the two pieces of content
+                      support each other.
+                      However, the extended summary also separates the API signature from the <a
+                        class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-parameters"><span
+                          class="std std-ref">Parameters</span></a> section, which users expect to see close together.
+                      As a general guideline, the extended summary should be three sentences or fewer.</p>
+                  </section>
+                  <section id="template-parameters">
+                    <span id="cpp-doxygen-tparameters"></span>
+                    <h3>Template Parameters<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#template-parameters"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>A series of <code class="docutils literal notranslate"><span class="pre">@tparam</span></code>
+                      tags, usually one for each template parameter. Each tag should have a description following the
+                      parameter name. You do <em>not</em> usually need to document default values; Doxygen will provide
+                      the default automatically. If the description extends over multiple lines, each line after the
+                      first must be indented.</p>
+                    <p>Parameters should be listed in the same order as they appear in the class, function, or method
+                      signature.</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Storage for arbitrary data with log(N) lookup.</span>
+<span class="cm"> *</span>
+<span class="cm"> * ...</span>
+<span class="cm"> *</span>
+<span class="cm"> * @tparam T the type of data stored in the table</span>
+<span class="cm"> * @tparam ComparatorT callable defining a strict weak ordering for objects</span>
+<span class="cm"> *     of type `T`. Its `operator()` must accept two `T` and return `true`</span>
+<span class="cm"> *     if and only if the first argument comes before the second. It must</span>
+<span class="cm"> *     not throw exceptions.</span>
+<span class="cm"> */</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">ComparatorT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">less</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">LookupTable</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>When two or more consecutive template parameters have <em>exactly</em> the same description, they
+                      can be combined:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @tparam T, U the types of the pair components</span>
+<span class="cm"> */</span>
+</pre>
+                      </div>
+                    </div>
+                    <div class="admonition note" id="cpp-doxygen-tparameters-specializations">
+                      <p class="admonition-title">Note</p>
+                      <p>Doxygen will not properly parse parameter descriptions that have multiple paragraphs. If your
+                        template parameters require a lengthy explanation, put the explanation in the <a
+                          class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-extended-summary"><span
+                            class="std std-ref">Extended Summary</span></a> and refer to it from the parameter
+                        descriptions.</p>
+                    </div>
+                    <section id="template-specializations">
+                      <h4>Template Specializations<a class="headerlink"
+                          href="https://developer.lsst.io/cpp/api-docs.html#template-specializations"
+                          title="Permalink to this heading">¶</a></h4>
+                      <p>When a partial template specialization reuses parameters from the full template, there is no
+                        need to redocument each parameter. If you are omitting the parameters, the documentation must
+                        include a cross-reference to the full template, possibly as part of the <a
+                          class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-see-also"><span
+                            class="std std-ref">See Also</span></a> section.</p>
+                      <p>You must redocument the parameters if the template specialization redefines any parameters
+                        (e.g., if the generic parameter <code
+                          class="docutils literal notranslate"><span class="pre">T</span></code> becomes <code
+                          class="docutils literal notranslate"><span class="pre">T*</span></code> in the specialization)
+                        or if it places additional restrictions on their values.</p>
+                    </section>
+                  </section>
+                  <section id="function-method-parameters">
+                    <span id="cpp-doxygen-parameters"></span>
+                    <h3>Function/Method Parameters<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#function-method-parameters"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>A series of <code class="docutils literal notranslate"><span class="pre">@param</span></code>
+                      tags, usually one for each parameter. Each tag should have a description following the parameter
+                      name. You do <em>not</em> usually need to document default arguments; Doxygen will provide the
+                      default automatically. If the description extends over multiple lines, each line after the first
+                      must be indented.</p>
+                    <p>Parameters should be listed in the same order as they appear in the function or method signature.
+                      Make sure to keep the parameter list in sync with the actual parameters; Doxygen will issue a
+                      warning if they don’t match.</p>
+                    <p><code class="docutils literal notranslate"><span class="pre">@param</span></code> should be given
+                      with the <code class="docutils literal notranslate"><span class="pre">[in]</span></code>, <code
+                        class="docutils literal notranslate"><span class="pre">[out]</span></code>, or <code
+                        class="docutils literal notranslate"><span class="pre">[in,</span> <span class="pre">out]</span></code>
+                      tag if the function method contains any output parameters. The <code
+                        class="docutils literal notranslate"><span class="pre">[in]</span></code> tag is optional if all
+                      parameters are input, even if other functions or methods in the same class or package use output
+                      parameters.</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Compute mean and standard deviation for a collection of data.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[out] mean the mean of `data`, or `NaN` if `data` is empty</span>
+<span class="cm"> * @param[out] stdDev the unbiased (sample) standard deviation, or `NaN`</span>
+<span class="cm"> *     if `data` contains fewer than 2 elements</span>
+<span class="cm"> * @param[in] data the data to analyze</span>
+<span class="cm"> */</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">computeStatistics</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">mean</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">stdDev</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>When two or more consecutive parameters have <em>exactly</em> the same description, they can be
+                      combined:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @param x, y the coordinates where the function is evaluated</span>
+<span class="cm"> */</span>
+</pre>
+                      </div>
+                    </div>
+                    <div class="admonition note">
+                      <p class="admonition-title">Note</p>
+                      <p>Doxygen will not properly parse parameter descriptions that have multiple paragraphs. If your
+                        function’s input requires a lengthy explanation, put the explanation in the <a
+                          class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-notes"><span
+                            class="std std-ref">Notes</span></a> and refer to it from the parameter descriptions.</p>
+                    </div>
+                    <section id="annotating-parameters-with-inline-comments-historical">
+                      <span id="cpp-doxygen-parameters-inline"></span>
+                      <h4>Annotating Parameters with Inline Comments (historical)<a class="headerlink"
+                          href="https://developer.lsst.io/cpp/api-docs.html#annotating-parameters-with-inline-comments-historical"
+                          title="Permalink to this heading">¶</a></h4>
+                      <p>An alternative to the <code
+                          class="docutils literal notranslate"><span class="pre">@param</span></code> tag is to use an
+                        inline comment after each parameter, one per line.
+                        These comments are prefixed with <code
+                          class="docutils literal notranslate"><span class="pre">///&lt;</span></code>.</p>
+                      <p>This style is permitted for historical reasons, but should not be used in new code.
+                        If the parameter descriptions are too long to fit in a single line of source, the <code
+                          class="docutils literal notranslate"><span class="pre">@param</span></code> documentation
+                        method <em>must</em> be used.</p>
+                    </section>
+                  </section>
+                  <section id="returns">
+                    <span id="cpp-doxygen-returns"></span>
+                    <h3>Returns<a class="headerlink" href="https://developer.lsst.io/cpp/api-docs.html#returns"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>A <code class="docutils literal notranslate"><span class="pre">@returns</span></code> tag,
+                      followed by a description similar to the one for <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-parameters"><span
+                          class="std std-ref">Function/Method Parameters</span></a>. If the returned value is a map,
+                      ensure that the key-value pairs are documented in the description.</p>
+                    <p>For consistency with Python documentation, always use <code
+                        class="docutils literal notranslate"><span class="pre">@returns</span></code> and not the
+                      synonymous <code class="docutils literal notranslate"><span class="pre">@return</span></code>.</p>
+                  </section>
+                  <section id="throws">
+                    <span id="cpp-doxygen-throws"></span>
+                    <h3>Throws<a class="headerlink" href="https://developer.lsst.io/cpp/api-docs.html#throws"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>A series of <code class="docutils literal notranslate"><span class="pre">@throws</span></code>
+                      tags, one for each type of exception (see <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/style.html#style-guide-cpp-5-36"><span
+                          class="std std-ref">the style guide</span></a>). Each tag should have a description following
+                      the exception type. If the description extends over multiple lines, each line after the first must
+                      be indented.</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Write an image to disk.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @throws lsst::pex::exceptions::IoError Thrown if `fileName` could not be</span>
+<span class="cm"> *     written to.</span>
+<span class="cm"> */</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">writeImage</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">fileName</span><span class="p">);</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>Exception classes must be namespace-qualified using the same rules as <a
+                        class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-see-also"><span
+                          class="std std-ref">@see</span></a>.
+                      Doxygen will render one or more <code
+                        class="docutils literal notranslate"><span class="pre">@throws</span></code> tags as a table of
+                      exceptions and descriptions, so do not treat <code
+                        class="docutils literal notranslate"><span class="pre">@throws</span></code> as the first word
+                      of the description.</p>
+                    <p>For consistency with Python documentation, always use <code
+                        class="docutils literal notranslate"><span class="pre">@throws</span></code> and not the
+                      synonymous <code class="docutils literal notranslate"><span class="pre">@throw</span></code> or
+                      <code class="docutils literal notranslate"><span class="pre">@exception</span></code>.
+                    </p>
+                  </section>
+                  <section id="exception-safety">
+                    <span id="cpp-doxygen-exceptsafe"></span>
+                    <h3>Exception Safety<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#exception-safety"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>Whether or not there are any <code
+                        class="docutils literal notranslate"><span class="pre">@throws</span></code> tags for specific
+                      exceptions, a function or method should have an <code
+                        class="docutils literal notranslate"><span class="pre">@exceptsafe</span></code> tag.
+                      The description following the tag should describe the level of exception safety provided by the
+                      function or method.</p>
+                    <p>The following terms may be used for brevity:</p>
+                    <dl class="simple">
+                      <dt>no-throw</dt>
+                      <dd>
+                        <p>The function is guaranteed to always return without throwing an exception.</p>
+                      </dd>
+                      <dt>strong</dt>
+                      <dd>
+                        <p>If the function throws an exception, the program will be in the same state as before the
+                          call; i.e., failed calls have no side effects.</p>
+                      </dd>
+                      <dt>basic</dt>
+                      <dd>
+                        <p>If the function throws an exception, the program will be in a valid state, but not
+                          necessarily a predictable one. No memory, file descriptors, locks, or other resources will be
+                          leaked.</p>
+                      </dd>
+                      <dt>none</dt>
+                      <dd>
+                        <p>If the function throws an exception, objects may be corrupted and unsafe to use, or resources
+                          may be leaked.</p>
+                      </dd>
+                    </dl>
+                    <p>Examples:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Image associated with this map.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @exceptsafe Shall not throw exceptions.</span>
+<span class="cm"> */</span>
+<span class="n">ImageF</span><span class="w"> </span><span class="nf">getImage</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</pre>
+                      </div>
+                    </div>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Apply a user-specified transformation to an image.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @exceptsafe If `transform` provides basic exception safety, then this</span>
+<span class="cm"> *     method shall provide strong exception safety. Otherwise, it provides</span>
+<span class="cm"> *     no exception safety guarantee.</span>
+<span class="cm"> */</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Func</span><span class="o">&gt;</span>
+<span class="n">ImageF</span><span class="w"> </span><span class="n">transformImage</span><span class="p">(</span><span class="n">Func</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">transform</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</pre>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="helper-functions">
+                    <span id="cpp-doxygen-related"></span>
+                    <h3>Helper Functions<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#helper-functions"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>Some operations on a class, particularly arithmetic operators, must be implemented as standalone
+                      functions even though they are <em>conceptually</em> part of the class. These functions should
+                      have the <code class="docutils literal notranslate"><span class="pre">@relatesalso</span></code>
+                      tag, followed by the name of the appropriate class. They will appear on the class’s documentation
+                      page under the heading “Related Functions”. Use this tag sparingly.</p>
+                    <p>For internal consistency, always use <code
+                        class="docutils literal notranslate"><span class="pre">@relatesalso</span></code> and not the
+                      synonymous <code
+                        class="docutils literal notranslate"><span class="pre">@relatedalso</span></code>.</p>
+                    <p>Examples:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Add two images pixel-by-pixel.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @relatesalso ImageF</span>
+<span class="cm"> */</span>
+<span class="n">ImageF</span><span class="w"> </span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">ImageF</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">lhs</span><span class="p">,</span><span class="w"> </span><span class="n">ImageF</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">);</span>
+</pre>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="initializer-declaration">
+                    <span id="cpp-doxygen-initializer"></span>
+                    <h3>Initializer Declaration<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#initializer-declaration"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>By default, Doxygen shows the values of constants unless they are very long. The <code
+                        class="docutils literal notranslate"><span class="pre">@showinitializer</span></code> and <code
+                        class="docutils literal notranslate"><span class="pre">@hideinitializer</span></code> tags
+                      override this behavior.</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Maximum number of simultaneous readers supported.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @hideinitializer</span>
+<span class="cm"> */</span>
+<span class="kt">int</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">MAX_READERS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w">    </span><span class="c1">// Value is implementation detail and subject to change</span>
+</pre>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="see-also">
+                    <span id="cpp-doxygen-see-also"></span>
+                    <h3>See Also<a class="headerlink" href="https://developer.lsst.io/cpp/api-docs.html#see-also"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>‘See Also’ is an optional section used to refer to related code.
+                      This section can be very useful, but should be used judiciously.
+                      The goal is to direct users to other functions they may not be aware of, or have easy means of
+                      discovering (by looking at the class or package documentation, for example).
+                      Functions whose documentation further explains parameters used by this function are good
+                      candidates.</p>
+                    <p>This section can also refer to arbitrary pages using a URL or a Markdown-style link.</p>
+                    <p>List each class, function, method, or link using a <code
+                        class="docutils literal notranslate"><span class="pre">@see</span></code> tag:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Compute an element-wise cosine.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @see sin</span>
+<span class="cm"> * @see tan</span>
+<span class="cm"> * @see [numpy.vectorize](https://docs.scipy.org/doc/numpy/reference/generated/numpy.vectorize.html)</span>
+<span class="cm"> */</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">angles</span><span class="p">);</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>Prefix objects from other namespaces appropriately by their greatest common namespace. For
+                      example, while documenting an <code
+                        class="docutils literal notranslate"><span class="pre">lsst::afw::tables</span></code> module,
+                      refer to a class in <code
+                        class="docutils literal notranslate"><span class="pre">lsst::afw::detection</span></code> by
+                      <code
+                        class="docutils literal notranslate"><span class="pre">afw::detection::Footprint</span></code>.
+                      When referring to an entirely different module or package, use the full namespace.
+                      Do not use namespace abbreviations, as Doxygen has trouble resolving them.
+                    </p>
+                    <p>For internal consistency, always use <code
+                        class="docutils literal notranslate"><span class="pre">@see</span></code> and not the synonymous
+                      <code class="docutils literal notranslate"><span class="pre">@sa</span></code>.
+                    </p>
+                  </section>
+                  <section id="notes">
+                    <span id="cpp-doxygen-notes"></span>
+                    <h3>Notes<a class="headerlink" href="https://developer.lsst.io/cpp/api-docs.html#notes"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p><em>Notes</em> is an optional section that provides additional conceptual information about the
+                      API.</p>
+                    <p>The notes must be prefixed by a <code
+                        class="docutils literal notranslate"><span class="pre">@note</span></code> or <code
+                        class="docutils literal notranslate"><span class="pre">@warning</span></code> command.
+                      For internal consistency, always use <code
+                        class="docutils literal notranslate"><span class="pre">@note</span></code> and not the
+                      synonymous <code class="docutils literal notranslate"><span class="pre">@remark</span></code> or
+                      <code class="docutils literal notranslate"><span class="pre">@remarks</span></code>.
+                    </p>
+                    <p>Some things to include in a <em>Notes</em> section:</p>
+                    <ul class="simple">
+                      <li>
+                        <p>Discussions of features, going beyond the level of the <a class="reference internal"
+                            href="https://developer.lsst.io/python/numpydoc.html#py-docstring-short-summary"><span
+                              class="std std-ref">summary sentence</span></a> and <a class="reference internal"
+                            href="https://developer.lsst.io/python/numpydoc.html#py-docstring-extended-summary"><span
+                              class="std std-ref">extended summary</span></a>.</p>
+                      </li>
+                      <li>
+                        <p>Usage patterns, like how code is expected to use this API, or how this API is intended to be
+                          used in relation to other APIs.</p>
+                      </li>
+                      <li>
+                        <p>Background theory. For example, if the API implements an algorithm, you can fully document
+                          the algorithm here.</p>
+                      </li>
+                      <li>
+                        <p>Implementation details and limitations, if those details affect the user’s experience.
+                          Purely internal details should be written as regular code comments.</p>
+                      </li>
+                    </ul>
+                    <p>Specific how-tos, tutorials, and examples go in the <a class="reference internal"
+                        href="https://developer.lsst.io/python/numpydoc.html#py-docstring-examples"><span
+                          class="std std-ref">Examples section</span></a> instead of <em>Notes</em>.
+                      The <em>Notes</em> section is dedicated to conceptual documentation.</p>
+                    <p>The <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-parameters"><span
+                          class="std std-ref">Function/Method Parameters</span></a> and <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-returns"><span
+                          class="std std-ref">Returns</span></a> sections are the best places to describe specific input
+                      and output variables.
+                      The <em>Notes</em> section can still reference these variables by name (see <a
+                        class="reference internal"
+                        href="https://developer.lsst.io/python/numpydoc.html#py-docstring-parameter-markup"><span
+                          class="std std-ref">Marking up parameter names</span></a>), and discuss how they work at a
+                      big-picture level.
+                      Since the content in the <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-parameters"><span
+                          class="std std-ref">Function/Method Parameters</span></a> needs to be brief, you can write
+                      additional content as part of the <em>Notes</em> section.</p>
+                    <p>This section may include mathematical equations to document the algorithm implemented by the
+                      function or class.
+                      Equations may be written in <a class="reference external"
+                        href="http://www.latex-project.org/">LaTeX</a> format:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * The FFT is a fast implementation of the discrete Fourier transform:</span>
+<span class="cm"> * @f[ X(e^{j\omega } ) = x(n)e^{ - j\omega n} @f]</span>
+<span class="cm"> */</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>LaTeX environments can also be used:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * The discrete-time Fourier time-convolution property states that</span>
+<span class="cm"> * @f{eqnarray*}</span>
+<span class="cm"> * x(n) * y(n) \Leftrightarrow X(e^{j\omega } )Y(e^{j\omega } )\\</span>
+<span class="cm"> * another equation here</span>
+<span class="cm"> * @f}</span>
+<span class="cm"> */</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>Math can also be used inline:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Fit a model of the form @f$y = a x + b@f$ to the data.</span>
+<span class="cm"> */</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>Note that LaTeX is not particularly easy to read, so use equations judiciously. In particular, do
+                      not use inline LaTeX just to add Greek or other special symbols; prefer <a
+                        class="reference external" href="http://www.doxygen.org/manual/htmlcmds.html">HTML character
+                        entities</a> or Unicode instead.</p>
+                    <p>Doxygen recovers poorly from typos in formulas; you may need to manually delete <code
+                        class="docutils literal notranslate"><span class="pre">docs/html/formula.repository</span></code>
+                      if it contains a bad formula.</p>
+                    <p>Images are allowed, but should not be central to the explanation; users viewing the documentation
+                      as text must be able to comprehend its meaning without resorting to an image viewer.
+                      These additional illustrations are included using the <code
+                        class="docutils literal notranslate"><span class="pre">@image</span></code> command:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @image html filename ["caption"]</span>
+<span class="cm"> */</span>
+</pre>
+                      </div>
+                    </div>
+                    <p><code class="docutils literal notranslate"><span class="pre">filename</span></code> is a path
+                      relative to the project root directory.</p>
+                    <p>Equations or images may be used as described in <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-extended-summary"><span
+                          class="std std-ref">Extended Summary</span></a>.</p>
+                  </section>
+                  <section id="references">
+                    <span id="cpp-doxygen-references"></span>
+                    <h3>References<a class="headerlink" href="https://developer.lsst.io/cpp/api-docs.html#references"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>References can be included either in the <a class="reference internal"
+                        href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-notes"><span
+                          class="std std-ref">‘Notes’</span></a> section or in a separate list below them. A reference
+                      consists of the <code class="docutils literal notranslate"><span class="pre">@cite</span></code>
+                      tag, followed by a BibTeX label. Bibfiles must be listed in the <code
+                        class="docutils literal notranslate"><span class="pre">CITE_BIB_FILES</span></code>
+                      configuration tag in <code
+                        class="docutils literal notranslate"><span class="pre">doc/doxygen.conf.in</span></code>.</p>
+                    <p>Note that Web pages should be referenced with regular inline links.</p>
+                    <p>References are meant to augment the documentation, but should not be required to understand it.
+                    </p>
+                  </section>
+                  <section id="examples">
+                    <span id="cpp-doxygen-examples"></span>
+                    <h3>Examples<a class="headerlink" href="https://developer.lsst.io/cpp/api-docs.html#examples"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>‘Examples’ is an optional section for examples. This section is very strongly encouraged.</p>
+                    <p>Examples should use Markdown formatting for code blocks (i.e., indented by four extra spaces):
+                    </p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * This is an amazing function! For example:</span>
+<span class="cm"> *</span>
+<span class="cm"> *     auto cosines = cos(angles);</span>
+<span class="cm"> *</span>
+<span class="cm"> * Comment explaining the second example.</span>
+<span class="cm"> *</span>
+<span class="cm"> *     auto cosines = cos(radians(angles));</span>
+<span class="cm"> */</span>
+</pre>
+                      </div>
+                    </div>
+                  </section>
+                </section>
+                <section id="documenting-defining-packages">
+                  <span id="cpp-doxygen-package-definition"></span>
+                  <h2>Documenting/Defining Packages<a class="headerlink"
+                      href="https://developer.lsst.io/cpp/api-docs.html#documenting-defining-packages"
+                      title="Permalink to this heading">¶</a></h2>
+                  <p>LSST packages are no longer documented using Doxygen.
+                    Instead, they should be documented using the Sphinx <a class="reference internal"
+                      href="https://developer.lsst.io/stack/module-homepage-topic-type.html#module-homepage"><span
+                        class="std std-ref">Module homepage topic type</span></a>.</p>
+                </section>
+                <section id="documenting-classes-and-type-aliases">
+                  <span id="cpp-doxygen-class-structure"></span>
+                  <h2>Documenting Classes and Type Aliases<a class="headerlink"
+                      href="https://developer.lsst.io/cpp/api-docs.html#documenting-classes-and-type-aliases"
+                      title="Permalink to this heading">¶</a></h2>
+                  <p>Class documentation blocks are placed immediately before the class declaration, and serve to
+                    document the class as a whole rather than individual methods.</p>
+                  <ol class="arabic simple">
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-short-summary"><span
+                            class="std std-ref">Short Summary</span></a></p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-extended-summary"><span
+                            class="std std-ref">Extended Summary</span></a> (recommended)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-tparameters"><span
+                            class="std std-ref">Template Parameters</span></a> (if applicable)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-see-also"><span
+                            class="std std-ref">See Also</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-notes"><span
+                            class="std std-ref">Notes</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-references"><span
+                            class="std std-ref">References</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-examples"><span
+                            class="std std-ref">Examples</span></a> (optional)</p>
+                    </li>
+                  </ol>
+                  <p>For example:</p>
+                  <div class="highlight-cpp notranslate">
+                    <div class="highlight">
+                      <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Implementation of a trace facility for LSST</span>
+<span class="cm"> *</span>
+<span class="cm"> * Tracing is controlled on a per "component" basis, where a "component" is a</span>
+<span class="cm"> * name of the form aaa.bbb.ccc where aaa is the Most significant part; for</span>
+<span class="cm"> * example, the utilities library might be called "utils", the doubly-linked</span>
+<span class="cm"> * list "utils.dlist", and the code to destroy a list "utils.dlist.del"</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TraceImpl</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="p">}</span>
+</pre>
+                    </div>
+                  </div>
+                  <p>Type alias declarations and typedefs should also be documented, although just a short summary is
+                    usually sufficient.
+                    Doxygen will automatically provide links to the types being renamed, if their documentation is
+                    available.</p>
+                </section>
+                <section id="documenting-enumerated-types">
+                  <span id="cpp-doxygen-enum-structure"></span>
+                  <h2>Documenting Enumerated Types<a class="headerlink"
+                      href="https://developer.lsst.io/cpp/api-docs.html#documenting-enumerated-types"
+                      title="Permalink to this heading">¶</a></h2>
+                  <p>An enumerated type is a type, and should be documented similarly to a class:</p>
+                  <ol class="arabic simple">
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-short-summary"><span
+                            class="std std-ref">Short Summary</span></a></p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-extended-summary"><span
+                            class="std std-ref">Extended Summary</span></a> (recommended)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-see-also"><span
+                            class="std std-ref">See Also</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-notes"><span
+                            class="std std-ref">Notes</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-references"><span
+                            class="std std-ref">References</span></a> (optional)</p>
+                    </li>
+                  </ol>
+                  <p>In addition, each value of the type should be documented. A short description is almost always
+                    sufficient.</p>
+                  <p>For example:</p>
+                  <div class="highlight-cpp notranslate">
+                    <div class="highlight">
+                      <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Supported coordinate systems for flux-conserving transformations.</span>
+<span class="cm"> *</span>
+<span class="cm"> * These values are used in arguments to various functions in this package.</span>
+<span class="cm"> * Unless otherwise stated, these functions do not validate whether the data</span>
+<span class="cm"> * set makes sense in the "from" coordinates.</span>
+<span class="cm"> */</span>
+<span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CoordType</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">/// Untransformed detector coordinates.</span>
+<span class="w">    </span><span class="n">PIXEL</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">/// Idealized detector coordinates after applying a distortion correction.</span>
+<span class="w">    </span><span class="n">WARP_PIXEL</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">/// Equatorial J2000.0 coordinates.</span>
+<span class="w">    </span><span class="n">SKY_WCS</span>
+<span class="p">};</span>
+</pre>
+                    </div>
+                  </div>
+                  <section id="annotating-enum-values-with-inline-comments-optional">
+                    <span id="cpp-doxygen-enum-inline"></span>
+                    <h3>Annotating Enum Values with Inline Comments (optional)<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#annotating-enum-values-with-inline-comments-optional"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>If the value descriptions are very short, you may choose to annotate values with inline comments
+                      after each constant, one per line.
+                      These comments are prefixed with <code
+                        class="docutils literal notranslate"><span class="pre">///&lt;</span></code>.</p>
+                    <p>For example:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CoordType</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">PIXEL</span><span class="p">,</span><span class="w">    </span><span class="c1">///&lt; Untransformed detector coordinates</span>
+<span class="w">    </span><span class="n">WARP_PIXEL</span><span class="p">,</span><span class="w">    </span><span class="c1">///&lt; Distortion-corrected detector coordinates</span>
+<span class="w">    </span><span class="n">SKY_WCS</span><span class="w">    </span><span class="c1">///&lt; Equatorial J2000.0 coordinates</span>
+<span class="p">};</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>If the constant descriptions are too long to fit in a single line of source, ordinary
+                      documentation blocks before each constant must be used.</p>
+                  </section>
+                </section>
+                <section id="documenting-methods-and-functions">
+                  <span id="cpp-doxygen-method-function-structure"></span>
+                  <h2>Documenting Methods and Functions<a class="headerlink"
+                      href="https://developer.lsst.io/cpp/api-docs.html#documenting-methods-and-functions"
+                      title="Permalink to this heading">¶</a></h2>
+                  <p>All public or protected methods and all functions must be preceded by a documentation block.
+                    Method or function documentation blocks contain the following sections:</p>
+                  <ol class="arabic simple">
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-short-summary"><span
+                            class="std std-ref">Short Summary</span></a></p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-extended-summary"><span
+                            class="std std-ref">Extended Summary</span></a> (recommended)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-tparameters"><span
+                            class="std std-ref">Template Parameters</span></a> (if applicable)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-parameters"><span
+                            class="std std-ref">Function/Method Parameters</span></a> (if applicable)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-returns"><span
+                            class="std std-ref">Returns</span></a> (if applicable)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-throws"><span
+                            class="std std-ref">Throws</span></a> (if applicable)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-exceptsafe"><span
+                            class="std std-ref">Exception Safety</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-related"><span
+                            class="std std-ref">Helper Functions</span></a> (if applicable; for functions only)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-see-also"><span
+                            class="std std-ref">See Also</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-notes"><span
+                            class="std std-ref">Notes</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-references"><span
+                            class="std std-ref">References</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-examples"><span
+                            class="std std-ref">Examples</span></a> (optional)</p>
+                    </li>
+                  </ol>
+                  <p>An example:</p>
+                  <div class="highlight-cpp notranslate">
+                    <div class="highlight">
+                      <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Read an image from disk.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param fileName the file to read. Must be either absolute or relative to</span>
+<span class="cm"> *     the program working directory.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @return the image stored in `fileName`. If the image on disk does not</span>
+<span class="cm"> *     have `double` pixels, they will be cast to `double`.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @throws IoError Thrown if `fileName` does not exist or is not readable.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @exceptsafe Strong exception guarantee.</span>
+<span class="cm"> */</span>
+<span class="n">lsst</span><span class="o">::</span><span class="n">afw</span><span class="o">::</span><span class="n">image</span><span class="o">::</span><span class="n">Image</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">loadImage</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">fileName</span><span class="p">);</span>
+</pre>
+                    </div>
+                  </div>
+                  <section id="overloaded-function-method-definitions">
+                    <span id="cpp-doxygen-method-function-overloads"></span>
+                    <h3>Overloaded Function/Method Definitions<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#overloaded-function-method-definitions"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p><code class="docutils literal notranslate"><span class="pre">@overload</span></code> may be used
+                      when two methods/functions are effectively the same but have different parameter lists for reasons
+                      of convenience.
+                      Use this tag <strong>only</strong> when the specification of the abbreviated overload can be
+                      easily inferred from the fully documented one.</p>
+                    <p>The text generated by the <code
+                        class="docutils literal notranslate"><span class="pre">@overload</span></code> tag tells readers
+                      to see the method “above”.
+                      Because Doxygen sorts the detailed documentation of namespace and class members, you should check
+                      the generated documentation to make sure the fully documented overload appears before any that use
+                      the <code class="docutils literal notranslate"><span class="pre">@overload</span></code> tag.</p>
+                    <p>For example:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Sum numbers in a vector.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param values Container whose values are summed.</span>
+<span class="cm"> * @return sum of `values`, or 0.0 if `values` is empty.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @exceptsafe This function does not throw exceptions.</span>
+<span class="cm"> */</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">values</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Sum numbers in an array.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @overload</span>
+<span class="cm"> */</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">double</span><span class="p">[]</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">nValues</span><span class="p">);</span>
+</pre>
+                      </div>
+                    </div>
+                  </section>
+                </section>
+                <section id="documenting-constants-variables-and-data-members">
+                  <span id="cpp-doxygen-attribute-constants-structure"></span>
+                  <h2>Documenting Constants, Variables, and Data Members<a class="headerlink"
+                      href="https://developer.lsst.io/cpp/api-docs.html#documenting-constants-variables-and-data-members"
+                      title="Permalink to this heading">¶</a></h2>
+                  <p>All non-private constants, variables, or data members must be preceded by a documentation block.
+                    At minimum, constants/variables/data members should have a summary line, but can also have a more
+                    complete structure:</p>
+                  <ol class="arabic simple">
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-short-summary"><span
+                            class="std std-ref">Short Summary</span></a></p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-extended-summary"><span
+                            class="std std-ref">Extended Summary</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-initializer"><span
+                            class="std std-ref">Initializer Declaration</span></a> (optional; for constants only)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-notes"><span
+                            class="std std-ref">Notes</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-references"><span
+                            class="std std-ref">References</span></a> (optional)</p>
+                    </li>
+                    <li>
+                      <p><a class="reference internal"
+                          href="https://developer.lsst.io/cpp/api-docs.html#cpp-doxygen-examples"><span
+                            class="std std-ref">Examples</span></a> (optional)</p>
+                    </li>
+                  </ol>
+                  <p>For example:</p>
+                  <div class="highlight-cpp notranslate">
+                    <div class="highlight">
+                      <pre><span></span><span class="c1">/// Flag set if background subtraction should not be done.</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NO_BACKGROUND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</pre>
+                    </div>
+                  </div>
+                  <section id="annotating-constants-and-variables-with-inline-comments-optional">
+                    <span id="cpp-doxygen-attribute-constants-inline"></span>
+                    <h3>Annotating Constants and Variables with Inline Comments (optional)<a class="headerlink"
+                        href="https://developer.lsst.io/cpp/api-docs.html#annotating-constants-and-variables-with-inline-comments-optional"
+                        title="Permalink to this heading">¶</a></h3>
+                    <p>If the constant, variable, or data member descriptions are very short, you may choose to annotate
+                      them with inline comments after each value, one per line.
+                      These comments are prefixed with <code
+                        class="docutils literal notranslate"><span class="pre">///&lt;</span></code>.</p>
+                    <p>For example:</p>
+                    <div class="highlight-cpp notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NO_BACKGROUND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">        </span><span class="c1">///&lt; Skip background subtraction</span>
+</pre>
+                      </div>
+                    </div>
+                    <p>If the descriptions are too long to fit in a single line of source, ordinary documentation blocks
+                      before each value must be used.</p>
+                  </section>
+                </section>
+              </section>
+
+
+            </div>
+          </div>
+          <footer>
+
+            <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+              <a href="https://developer.lsst.io/cpp/clang-format.html" class="btn btn-neutral float-right"
+                title="Using clang-format for LSST Development" accesskey="n">Next <span
+                  class="fa fa-arrow-circle-right"></span></a>
+
+
+              <a href="https://developer.lsst.io/coding/unit-test-policy.html" class="btn btn-neutral"
+                title="Software Unit Test Policy" accesskey="p"><span class="fa fa-arrow-circle-left"></span>
+                Previous</a>
+
+            </div>
+
+
+            <hr>
+
+            <div role="contentinfo">
+              <p>
+                © Copyright 2016-2023 Association of Universities for Research in Astronomy, Inc. (AURA).
+
+              </p>
+
+
+              <p>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License"
+                    style="border-width:0"
+                    src="./Documenting C++ Code — LSST DM Developer Guide main documentation_files/cc-by_small.svg"></a><br><span
+                  xmlns:dct="http://purl.org/dc/terms/" property="dct:title">LSST DM Developer Guide</span> by <a
+                  xmlns:cc="http://creativecommons.org/ns#" href="http://docs.lsst.codes/" property="cc:attributionName"
+                  rel="cc:attributionURL">the LSST Project</a> is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+                  License</a>.
+              </p>
+            </div>
+
+            <p>LSST documentation is delivered by <a href="https://www.fastly.com/">Fastly</a>.</p>
+
+            <p>
+              Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a
+                href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a
+                href="https://readthedocs.org/">Read the Docs</a>.
+            </p>
+
+            <p>Financial support for LSST comes from the National Science Foundation (NSF) through Cooperative Agreement
+              No. 1258333, the Department of Energy (DOE) Office of Science under Contract No. DE-AC02-76SF00515, and
+              private funding raised by the <a href="http://www.lsstcorporation.org/">LSST Corporation</a>. The
+              NSF-funded LSST Project Office for construction was established as an operating center under management of
+              the Association of Universities for Research in Astronomy (<a
+                href="http://www.aura-astronomy.org/">AURA</a>). The DOE-funded effort to build the LSST camera is
+              managed by the SLAC National Accelerator Laboratory (<a href="https://www6.slac.stanford.edu/">SLAC</a>).
+            </p>
+
+          </footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+    });
+  </script><svg id="__fanberry__svg__icons__dom__" xmlns="http://www.w3.org/2000/svg"
+    xmlns:link="http://www.w3.org/1999/xlink" style="position: absolute; width: 0px; height: 0px;">
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-add">
+      <path
+        d="M512 146.286a73.143 73.143 0 0 1 73.143 73.143v219.428H804.57a73.143 73.143 0 0 1 0 146.286H585.143V804.57a73.143 73.143 0 0 1-146.286 0V585.143H219.43a73.143 73.143 0 1 1 0-146.286h219.428V219.43A73.143 73.143 0 0 1 512 146.286z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-auto">
+      <path
+        d="M623.62 109.216c4.044-20.318 23.543-33.88 43.605-28.711a448.022 448.022 0 0 1-35.518 875.265 38.384 38.384 0 0 1-43.963 62.643l-4.657-3.225-76.769-61.414a38.384 38.384 0 0 1-4.247-56.042l4.247-3.94 76.77-61.415a38.384 38.384 0 0 1 60.186 42.683 371.202 371.202 0 0 0 11.31-718.503c-20.88-5.732-35.211-26.101-30.963-47.34zM367.01 14.433a38.384 38.384 0 0 1 49.285-9.213l4.709 3.173 76.769 61.415a38.384 38.384 0 0 1 4.145 56.093l-4.197 3.94-76.768 61.415a38.384 38.384 0 0 1-60.238-42.683 371.202 371.202 0 0 0-11.26 718.503c20.882 5.732 35.212 26.102 30.964 47.34-4.094 20.319-23.543 33.881-43.605 28.764A448.022 448.022 0 0 1 372.28 67.863a38.384 38.384 0 0 1-5.322-53.38zm185.166 338.703a10.236 10.236 0 0 1 8.598 4.708l1.126 2.354 96.319 292.898a10.236 10.236 0 0 1-6.858 13.051l-2.866.358h-78.15a10.236 10.236 0 0 1-8.906-5.118l-1.023-2.507-12.846-48.928H457.34l-13.255 48.979a10.236 10.236 0 0 1-7.165 7.216l-2.713.358h-78.662a10.236 10.236 0 0 1-10.236-10.543l.512-2.814 95.193-292.95a10.236 10.236 0 0 1 7.165-6.755l2.559-.307h101.437zm-58.856 70.73-1.228 3.07-25.18 103.433-.256 2.712a10.236 10.236 0 0 0 7.523 9.57l2.712.36h51.18l2.712-.36a10.236 10.236 0 0 0 7.472-9.62l-.307-2.764-25.999-103.382-1.28-3.07-1.995-2.355a10.543 10.543 0 0 0-13.358.051l-1.996 2.354z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-avatar">
+      <path
+        d="M538.56 587.296h-53.12a240.96 240.96 0 0 0-232.32 176.896A360.32 360.32 0 0 0 512 873.408c101.504 0 193.248-41.824 258.912-109.216A240.96 240.96 0 0 0 543.904 587.36l-5.28-.064zM512 240.96a150.592 150.592 0 1 0 0 301.152 150.592 150.592 0 0 0 0-301.184z">
+      </path>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="icon-check">
+      <path d="M0 12C0 5.373 5.373 0 12 0h8v8c0 6.627-5.373 12-12 12H0v-8Z"></path>
+      <path d="m8.003 10 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-close">
+      <path
+        d="M753.408 330.923a42.667 42.667 0 1 0-60.33-60.374L512 451.584 331.008 270.549a42.667 42.667 0 1 0-60.33 60.374l181.034 180.992-181.035 181.034a42.667 42.667 0 1 0 60.331 60.331l181.035-180.992L693.035 753.28a42.667 42.667 0 0 0 60.373-60.33L572.373 511.914l181.035-180.992z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-edit">
+      <path
+        d="M512 853.333h426.667a85.333 85.333 0 0 1 0 170.667H512a85.333 85.333 0 1 1 0-170.667zM706.219 39.851 139.947 606.123A181.59 181.59 0 0 0 97.877 672L31.744 852.139a42.667 42.667 0 0 0 54.784 54.784l180.139-66.134c24.746-9.045 47.274-23.466 65.877-42.069l566.272-566.272A136.192 136.192 0 0 0 706.219 39.851z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-error">
+      <path
+        d="M813.739 210.261a85.333 85.333 0 0 1 0 120.747L632.66 512 813.74 692.992a85.333 85.333 0 0 1-120.832 120.747L512 632.66 331.008 813.74a85.333 85.333 0 0 1-120.747-120.832L391.34 512 210.26 331.008a85.333 85.333 0 0 1 120.832-120.747L512 391.34 692.992 210.26a85.333 85.333 0 0 1 120.747 0z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-icon_right">
+      <path
+        d="M701.147 512 387.145 826.002A73.143 73.143 0 0 0 490.57 929.426l365.714-365.714a73.143 73.143 0 0 0 0-103.424L490.57 94.574a73.143 73.143 0 1 0-103.424 103.424L701.147 512z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-icon_tick">
+      <path
+        d="M837.699 348.16 466.588 764.171a52.736 52.736 0 0 1-79.783 0L186.613 542.275a68.03 68.03 0 0 1 0-88.688 53.426 53.426 0 0 1 39.891-18.52 53.426 53.426 0 0 1 39.892 18.52l159.922 178.087L757.56 259.83a52.714 52.714 0 0 1 79.783 0 68.007 68.007 0 0 1 .356 88.331z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-loading">
+      <path
+        d="M970.23 495.328C963.472 234.667 750.21 25.401 487.923 25.401 229.71 25.401 18.852 228.19 5.923 483.195 18.878 214.16 241.08 0 513.325 0c276.317 0 500.942 220.637 507.707 495.328H970.23Z">
+      </path>
+      <path
+        d="m734.368 971.825-29.203-59.253C853.375 835.708 956.47 682.808 961.237 504.1c6.994-261.787-199.545-479.664-461.324-486.658C423.455 15.402 350.807 31.684 286 62.123l-.821-1.676c32.014-15.817 66.128-28.577 102.181-37.603 272.185-68.084 548.037 97.364 616.13 369.558 59.236 236.792-58.33 476.294-269.12 579.423Z">
+      </path>
+      <path
+        d="M749.686 959.844c-207.513 109.066-455.931 60.168-608.221-103.68-15.317-6.376-26.096-21.456-26.096-39.084 0-23.378 18.958-42.336 42.336-42.336 15.376 0 28.704 8.281 36.12 20.541l1.474-1.278c108.117 112.621 270.322 168.31 434.153 133.036 251.364-54.122 411.258-301.77 357.136-553.134-15.436-71.7-46.671-135.923-89.193-189.892l3.124-2.718c23.666 27.924 44.766 58.736 62.505 92.486 130.538 248.367 35.02 555.521-213.338 686.06Z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-menu">
+      <path
+        d="M76.8 140.8A51.2 51.2 0 0 1 128 89.6h768a51.2 51.2 0 1 1 0 102.4H128a51.2 51.2 0 0 1-51.2-51.2zm256 358.4A51.2 51.2 0 0 1 384 448h512a51.2 51.2 0 1 1 0 102.4H384a51.2 51.2 0 0 1-51.2-51.2zm-179.2-76.8a76.8 76.8 0 1 0 0 153.6 76.8 76.8 0 0 0 0-153.6zM76.8 857.6a76.8 76.8 0 1 1 153.6 0 76.8 76.8 0 0 1-153.6 0zM384 806.4a51.2 51.2 0 1 0 0 102.4h512a51.2 51.2 0 1 0 0-102.4H384z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-question">
+      <path
+        d="M512 73.143a438.857 438.857 0 1 1 0 877.714 438.857 438.857 0 0 1 0-877.714zm0 73.143a365.714 365.714 0 1 0 0 731.428 365.714 365.714 0 0 0 0-731.428zm-4.754 553.691c15.36 0 28.525 4.389 38.765 14.629 10.24 9.508 15.36 21.943 15.36 37.303 0 15.36-5.12 27.794-15.36 38.034-10.971 9.508-24.137 14.628-38.765 14.628-15.36 0-27.795-5.12-37.303-15.36a48.786 48.786 0 0 1-16.092-37.302c0-15.36 5.12-27.795 16.092-37.303 9.508-10.24 21.943-14.629 37.303-14.629zm12.434-427.886c47.543 0 85.577 12.435 114.834 38.766 28.526 25.6 43.155 60.709 43.155 104.594 0 35.84-9.509 65.829-27.063 89.235l-6.437 6.948-10.606 10.24-14.848 13.532-30.28 26.331c-13.166 11.703-23.406 24.137-29.99 37.303-6.436 11.703-10.02 24.357-11.263 38.254l-.44 10.752v12.434H468.48v-12.434c0-27.063 4.389-50.469 13.897-69.486 9.216-18.432 32.695-44.617 70.364-78.994l13.019-11.703 12.434-13.897c13.166-16.823 19.749-34.377 19.749-53.395 0-25.6-7.314-45.348-21.212-59.977-14.628-14.628-35.108-21.943-61.44-21.943-32.914 0-57.051 10.24-71.68 30.72-11.264 14.995-17.7 35.987-19.31 61.952l-.438 13.386H346.33c0-53.395 15.36-95.086 46.812-125.806 30.72-31.452 73.143-46.812 126.537-46.812z">
+      </path>
+    </symbol>
+    <symbol fill="none" viewBox="0 0 18 18" id="icon-reset_expand">
+      <path
+        d="M12.25 2a.75.75 0 0 0 0 1.5h1.19l-3.22 3.22-.052.056a.75.75 0 0 0 1.056 1.056l.056-.052 3.22-3.22v1.19a.75.75 0 0 0 1.5 0v-2.8a.95.95 0 0 0-.95-.95h-2.8ZM7.78 10.22a.75.75 0 0 0-1.004-.052l-.056.052-3.22 3.22v-1.19a.75.75 0 0 0-1.5 0v2.8c0 .524.425.95.95.95h2.8a.75.75 0 0 0 0-1.5H4.56l3.22-3.22.052-.056a.75.75 0 0 0-.052-1.004Z"
+        fill="#fff"></path>
+    </symbol>
+    <symbol fill="none" viewBox="0 0 18 18" id="icon-reset_reduce">
+      <path
+        d="M13.75 8a.75.75 0 0 0 0-1.5h-1.19l3.22-3.22.052-.056a.75.75 0 0 0-1.056-1.056l-.056.052-3.22 3.22V4.25a.75.75 0 0 0-1.5 0v2.8c0 .525.425.95.95.95h2.8ZM2.22 15.78a.75.75 0 0 0 1.004.052l.056-.052 3.22-3.22v1.19a.75.75 0 0 0 1.5 0v-2.8a.95.95 0 0 0-.95-.95h-2.8a.75.75 0 0 0 0 1.5h1.19l-3.22 3.22-.052.056a.75.75 0 0 0 .052 1.004Z"
+        fill="#fff"></path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-special_clear">
+      <path
+        d="M651.636 370.223H372.364a93.09 93.09 0 0 0-93.091 93.09v325.819a186.182 186.182 0 0 0 186.182 186.181h93.09a186.182 186.182 0 0 0 186.182-186.181V463.313a93.09 93.09 0 0 0-93.09-93.09zm-279.272 93.09h279.272v325.819a93.09 93.09 0 0 1-93.09 93.09h-93.091a93.09 93.09 0 0 1-93.091-93.09V463.313z">
+      </path>
+      <path
+        d="M442.182 765.859a69.818 69.818 0 1 0 139.636 0 69.818 69.818 0 1 0-139.636 0ZM465.45500000000004 509.859h93.09q46.546 0 46.546 46.545 0 46.546-46.546 46.546h-93.09q-46.546 0-46.546-46.546 0-46.545 46.546-46.545ZM386.001 244.224a178.176 178.176 0 0 1 251.998 0 46.545 46.545 0 0 1-65.816 65.815 85.085 85.085 0 0 0-120.366 0A46.545 46.545 0 0 1 386 244.224z">
+      </path>
+      <path
+        d="M346.53 98.77a298.263 298.263 0 0 1 330.94 0 46.545 46.545 0 0 1-51.666 77.451 205.172 205.172 0 0 0-227.608 0 46.545 46.545 0 0 1-51.665-77.452z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1210 1024" id="icon-special_earthquake">
+      <path
+        d="m852.713 232.727 32.582 37.981 32.535-31.185 38.54 37.004 24.901-19.643h182.365v534.389h-91.973l-.047-439.715h-59.252l-61.766 48.78-32.861-31.419-38.82 37.237-26.204-30.441-36.771 42.915-38.493-67.026h-70.33v167.983H538.996v112.081H337.455v102.4h-198.89v57.205h-92.02V639.395h198.982v-102.4H447.07V424.82h168.122V256.791h214.854l.745 1.397z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-special_fireworks">
+      <path
+        d="M884.41 186.182H526.57v279.273H336.524V512c0 79.825-45.15 137.588-96.256 177.804a407.738 407.738 0 0 1-99.142 56.971l-1.397.466-.093.046 15.36 43.94 15.453 43.938.14-.046.28-.094.744-.279a286.348 286.348 0 0 0 10.985-4.329 501.015 501.015 0 0 0 115.246-67.49c54.412-42.776 113.245-109.755 128.187-204.382H619.66V279.273h172.963v558.499h91.74v-651.59z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-special_pause">
+      <path
+        d="M512 139.636a372.364 372.364 0 1 1 0 744.728 372.364 372.364 0 0 1 0-744.728zm0 93.091a279.273 279.273 0 1 0 0 558.546 279.273 279.273 0 0 0 0-558.546z">
+      </path>
+      <path
+        d="M372.364 418.91a46.545 46.545 0 0 1 93.09 0v204.8a46.545 46.545 0 1 1-93.09 0v-204.8zm232.727-46.546a46.545 46.545 0 0 0-46.546 46.545v204.8a46.545 46.545 0 1 0 93.091 0v-204.8a46.545 46.545 0 0 0-46.545-46.545z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-special_pulse">
+      <path
+        d="M688.873 232.727v465.455h195.49v93.09H595.783V325.819H428.218v465.455H139.636v-93.091h195.445l.046-465.455z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-special_random">
+      <path
+        d="M337.315 279.273 631.9 651.636h112.826v-93.09l139.637 139.636-139.637 139.636v-93.09H586.845l-294.54-372.364H139.636v-93.091h197.679z">
+      </path>
+      <path
+        d="m744.727 186.182 139.637 139.636-139.637 139.637v-93.091H631.855l-294.54 372.363H139.636v-93.09h152.576l294.633-372.364h157.882v-93.091z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-special_randomTime">
+      <path
+        d="M516.561 203.217a372.364 372.364 0 1 0 0 744.728 372.364 372.364 0 0 0 0-744.728zm0 93.091a279.273 279.273 0 1 1 0 558.546 279.273 279.273 0 0 1 0-558.546z">
+      </path>
+      <path d="M330.38 435.945H457.82L639.07 622.127h63.674v93.09H599.785L418.537 529.036H330.38z"></path>
+      <path
+        d="M702.743 435.945v93.09h-63.72L457.82 715.218H330.38v-93.09h88.11l181.295-186.182zM738.488 116.362l161.238 93.091q40.31 23.273 17.037 63.583-23.273 40.31-63.582 17.036l-161.239-93.09q-40.31-23.273-17.036-63.583 23.272-40.31 63.582-17.037ZM133.397 209.453l161.238-93.09q40.31-23.273 63.582 17.036 23.273 40.31-17.036 63.583l-161.239 93.09q-40.31 23.273-63.582-17.036-23.273-40.31 17.037-63.583Z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-special_wave">
+      <path
+        d="M360.355 279.273c101.236 0 146.153 52.224 195.072 179.432l21.504 58.182 4.003 10.38 7.68 18.944c26.205 62.231 45.894 81.222 78.429 81.222 53.527 0 80.85-20.713 115.526-76.195l19.549-32.023c35.654-57.81 66.932-87.18 118.83-90.438l9.961-.28v99.468c-12.148 0-21.783 7.727-39.982 36.12l-24.53 40.028C815.43 685.661 760.972 726.9 667.043 726.9c-94.022 0-134.377-48.407-181.62-172.125l-21.644-58.554c-34.397-90.019-58.089-117.48-103.424-117.48-66.327 0-104.82 55.295-132.794 176.407l-4.515 20.526-4.655 22.714-12.614 66.793-4.561 22.482-4.329 19.223a338.106 338.106 0 0 1-8.983 31.139l-2.467 6.702-92.346-35.7 1.629-4.468 3.258-10.566 3.305-13.033 3.537-15.825 16.524-86.11 4.934-24.203 4.887-22.202c37.33-161.42 101.283-253.347 229.19-253.347z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-success">
+      <path
+        d="M47.787 555.35 318.89 872.447a41.813 41.813 0 0 0 62.293-1.195l588.63-697.6a41.301 41.301 0 0 0-2.22-56.32 41.813 41.813 0 0 0-56.66-2.048l-543.147 464.47a41.643 41.643 0 0 1-48.896 4.266l-218.795-91.989a41.813 41.813 0 0 0-53.76 9.301 40.96 40.96 0 0 0 1.45 54.016z">
+      </path>
+    </symbol>
+    <symbol class="icon" viewBox="0 0 1024 1024" id="icon-warning">
+      <path
+        d="M433.237 42.667a42.667 42.667 0 0 0-42.24 48.64L467.2 625.323A17.067 17.067 0 0 0 484.096 640h55.808a17.067 17.067 0 0 0 16.896-14.677l76.203-533.931a42.667 42.667 0 0 0-42.24-48.725H433.152zM512 981.333a128 128 0 1 0 0-256 128 128 0 0 0 0 256z">
+      </path>
+    </symbol>
+  </svg>
+
+
+</body>
+
+</html>

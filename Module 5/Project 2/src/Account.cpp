@@ -68,7 +68,8 @@ int Account::getNumberOfYears() const {
 double Account::calculateBalance(int t_years, bool t_withMonthlyDeposit) {
     double monthlyInterestRate = (m_annualInterest / 100.0) / 12.0;
     double totalAmount = m_initialInvestment;
-    // Determine the monthly deposit amount based on the flag
+
+    // Determine the monthly deposit amount based on the flag (true or false)
     double monthlyDeposit = t_withMonthlyDeposit ? m_monthlyDeposit : 0.0;
 
     for (int i = 1; i <= t_years * 12; i++) {
