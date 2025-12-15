@@ -2,7 +2,7 @@
 
 ## Code Design
 
-The program is designed using Object-Oriented Programming (OOP) principles in C++. The core logic is encapsulated within a class (e.g., `ItemTracker` or `GrocerData`) to separate data handling from the main menu logic.
+The program is designed using Object-Oriented Programming (OOP) principles in C++. The core logic is encapsulated within the `Grocery` class to separate data handling from the main menu logic.
 
 ### Data Structures
 
@@ -14,15 +14,20 @@ A `std::map<string, int>` is used as the primary data structure for storing item
 
 ### Class Structure
 
-The class contains:
+The `Grocery` class contains:
 
 - **Private Members:** The map structure to store the data.
 - **Public Methods:**
-  - `InitializeFromFile(string filename)`: Reads the input file and populates the map.
-  - `WriteBackupFile(string filename)`: Writes the map data to `frequency.dat`.
-  - `GetItemFrequency(string item)`: Returns the count for a specific item.
-  - `PrintAllFrequencies()`: Iterates through the map to print key-value pairs.
-  - `PrintHistogram()`: Iterates through the map and prints asterisks corresponding to the value.
+  - `LoadData(string filename)`: Reads the input file and populates the map.
+  - `SaveData()`: Writes the map data to `frequency.dat`.
+  - `GetFrequency(string item)`: Returns the count for a specific item.
+  - `GetFrequencyMap()`: Returns the entire map for display purposes.
+
+The `Display` class handles user interaction:
+
+- `PrintItemFrequency()`: Handles input/output for specific item queries.
+- `PrintFrequencyList()`: Iterates through the map to print key-value pairs.
+- `PrintHistogram()`: Iterates through the map and prints asterisks corresponding to the value.
 
 ## Functionality & Screenshots
 
