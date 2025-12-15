@@ -7,25 +7,16 @@
 #include <string>
 #include <thread>
 
-Display::PrintItemFrequency() {
+Display::PrintItemFrequency(Grocery& t_groceryList) {
     // print item frequency of a specific item
-
-    // return 0 to exit the program
-    return 0;
 }
 
-Display::PrintFrequencyList() {
+Display::PrintFrequencyList(Grocery& t_groceryList) {
     // print frequency list of all items
-
-    // return 0 to exit the program
-    return 0;
 }
 
-Display::PrintHistogram() {
+Display::PrintHistogram(Grocery& t_groceryList) {
     // print histogram of all items frequencies
-
-    // return 0 to exit the program
-    return 0;
 }
 
 Display::Exit() {
@@ -34,7 +25,4 @@ Display::Exit() {
 
     // sleep for 2 seconds to give time for the message to be displayed
     std::this_thread::sleep_for(std::chrono::seconds(2));
-
-    // return 0 to exit the program
-    return 0;
 }

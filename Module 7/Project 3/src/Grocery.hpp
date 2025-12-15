@@ -1,37 +1,24 @@
 #ifndef GROCERY_HPP
 #define GROCERY_HPP
 
+#include <fstream>
 #include <iostream>
 #include <map>
 #include <string>
 
 class Grocery {
    public:
-    Grocery();  // default constructor
+    Grocery();
+    void LoadData(std::string filename);
 
-    // setter for id. Sets the id of the item
-    void SetId(std::string id);
+    void SaveData();
 
-    // setter for frequency. Sets the frequency of the item
-    void SetFrequency(int frequency);
+    int GetFrequency(std::string item);
 
-    // getter for id. Returns the id of the item
-    std::string GetId();
-
-    // getter for frequency. Returns the frequency of the item
-    int GetFrequency();
-
-    // map frequency. Maps the frequency to the item
-    void MapFrequency(std::map<std::string, int> frequencyMap);
-
-    // frequency. Returns the frequency of the item
-    std::map<std::string, int> frequency();
+    std::map<std::string, int> GetFrequencyMap();
 
    private:
-    std::string id;
-    int frequency;
-
     std::map<std::string, int> frequencyMap;
+    std::string item;
+    int frequency;
 };
-
-#endif  // GROCERY_HPP

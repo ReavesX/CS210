@@ -12,14 +12,14 @@ class Display {
     Display();  // default constructor
 
     // Print specific item's frequency.
-    int PrintItemFrequency(Grocery item);
+    void PrintItemFrequency(Grocery& t_groceryList);
 
-    void PrintFrequencyList(Grocery list);
+    void PrintFrequencyList(Grocery& t_groceryList);
 
-    void PrintHistogram(std::map<std::string, int> list);
+    void PrintHistogram(Grocery& t_groceryList);
 
     // Exit Menu
-    int Exit();
+    void Exit();
 };
 
 #endif  // DISPLAY_HPP
