@@ -1,5 +1,7 @@
 #include "Display.hpp"
 
+#include <algorithm>
+#include <cctype>
 #include <chrono>
 #include <fstream>
 #include <iostream>
@@ -24,7 +26,14 @@ void Display::PrintItemFrequency(Grocery& t_groceryList) {
     std::string item;
     std::cout << "Enter an item name: ";
     std::cin >> item;
-    std::cout << item << " " << t_groceryList.GetFrequency(item) << std::endl;
+
+    // Convert item to lowercase for output (make it not appear the same as input and force
+    // lowercase)
+    std::string itemLower = item;
+    std::transform(itemLower.begin(), itemLower.end(), itemLower.begin(), ::tolower);
+
+    std::cout << itemLower << " " << t_groceryList.GetFrequency(item) << std::endl;
+
     std::cout << "\n" << std::endl;
 }
 
@@ -39,7 +48,7 @@ void Display::PrintHistogram(Grocery& t_groceryList) {
     for (const auto& pair : t_groceryList.GetFrequencyMap()) {  // for each pair, print item name
         std::cout << pair.first << " ";
         for (int i = 0; i < pair.second;
-             i++) {  // por each item convert number to asterisks by incrementing through i
+             i++) {  // For each item convert number to asterisks by incrementing through i
             std::cout << "*";
         }
         std::cout << std::endl;

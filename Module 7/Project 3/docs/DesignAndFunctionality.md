@@ -67,4 +67,12 @@ This option visualizes the data. It loops through the items, printing the name, 
 
 ### 5. Input Validation
 
-The program utilizes a `do-while` loop for the menu to ensure the program keeps running until "Exit" is chosen. It checks for valid integers on menu selection to prevent infinite loops or crashes if a character is entered.
+The program utilizes case-insensitive search to ensure that the user's input is not case-sensitive. It also handles invalid menu options and user input errors through a while loop with an if statement to check for valid input.
+
+Below is an example of invalid input and the error message:
+
+```text
+    Oreo Cookies
+
+    Please enter a valid option.
+```
